@@ -77,12 +77,12 @@ section
 details
 {
   background-color: hsl(60,60%,97%);
-  border: 5px solid hsl(60,60%,60%);    
+  border: 5px solid hsl(60,60%,60%);
 }
 
 div
 {
-  border: 2px dashed hsl(210,100%,40%);  
+  border: 2px dashed hsl(210,100%,40%);
 }
 
 /* HTML 4 Deprecated Tags and Attributes*/
@@ -113,7 +113,7 @@ marquee::after,
 *[border]::after,
 *[color]::after,
 *[bgcolor]::after
-{ 
+{
   content:"Note to Student: Look for and remove all HTML4 deprecated code before submission.";
   font-size:400%;
   color:red;
@@ -151,7 +151,7 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;  
+  display: inline-block;
   padding:0.2em;
 }
 
