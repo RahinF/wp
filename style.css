@@ -1,1 +1,57 @@
 /* This stylesheet is for your tested CSS, styles here will be deactivated when toggling wireframe style. */
+
+/*
+header div {
+  font-family: sans-serif;
+  text-align: center;
+  border: 0;
+}
+
+header div img {
+  width: 10%;
+}
+
+main div {
+  font-family: verdana;
+}
+
+nav {
+  font-family: verdana;
+  text-align: center;
+  background-color: light-gray;
+  border: 0px;
+}
+
+nav a {
+  padding: 10px;
+  text-decoration: none;
+
+}
+
+nav a:hover {
+  background-color: white;
+}
+
+nav a:visited {
+  color:blue;
+}
+
+
+footer {
+  font-family: verdana;
+}
+
+*/
+
+/* NOTE: centers profile picture */
+#my-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NOTE: centers 'about me'  */
+main article h2 {
+  font-family: sans-serif;
+  text-align: center;
+}
