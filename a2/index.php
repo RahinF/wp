@@ -22,19 +22,118 @@
 
     <nav>
       <div>
-
         <ul>
           <li><a href="#About_Us">About Us</a></li>
           <li><a href="#Prices">Prices</a></li>
           <li><a href="#Now_Showing">Now Showing</a></li>
         </ul>
-    </div>
+      </div>
     </nav>
 
     <main>
-    <section id="About_Us">about us</section>
-    <article id="Prices">prices</article>
-    <section id="Now_Showing">now showing</section>
+
+      <div id="About_Us">
+
+        <section class="split-1">
+          <h1>About us</h1>
+          reopening Lunardo Cinema now sport powerful dolby sound system, advanced stuff</section>
+        <section class="split-2">chairs
+          <img src="../../media/538.jpg" alt="Standard seats" class="Img_Seats">
+          <img src="../../media/Verona-Twin.png" alt="Standard seats" class="Img_Seats">
+        </section>
+        <section class="split-3">projection system</section>
+
+      </div>
+
+      <article id="Prices"><h1>Prices</h1>
+      On x days ticket prices are discounted!
+
+      <section>
+
+      <table>
+        <tr>
+          <th>Seat Type</th>
+          <th>Seat Code</th>
+          <th>All day Monday & Tuesday AND 12pm on Wednesday, Thursday & Friday.</th>
+          <th>All day Saturday & Sunday and after 12pm on Wednesday, Thursday & Friday.</th>
+        </tr>
+        <tr>
+          <th>Standard Adult</th>
+          <td>STA</td>
+          <td>$15.00</td>
+          <td>$20.50</td>
+        </tr>
+        <tr>
+          <th>Standard Concession</th>
+          <td>STP</td>
+          <td>$13.00</td>
+          <td>$18.00</td>
+        </tr>
+        <tr>
+          <th>Standard Child</th>
+          <td>STC</td>
+          <td>$11.00</td>
+          <td>$15.50</td>
+        </tr>
+        <tr>
+          <th>First Class Adult</th>
+          <td>FCA</td>
+          <td>$25.00</td>
+          <td>$30.00</td>
+        </tr>
+        <tr>
+          <th>First Class Concession</th>
+          <td>FCP</td>
+          <td>$23.00</td>
+          <td>$27.50</td>
+        </tr>
+        <tr>
+          <th>First Class Child</th>
+          <td>FCC</td>
+          <td>$21.00</td>
+          <td>$25.00</td>
+        </tr>
+      </table>
+        </section>
+
+    </article>
+
+      <div id="Now_Showing">
+        <h1>Now showing</h1>
+
+        <div class="movie-box">
+          <section class="movie_dispay-1">picture</section>
+          <p class="movie_dispay-1">
+            <h5>Star Wars: The Rise of Skywalker</h5>
+            <h5>Rating: M</h5>
+            Monday 12:00pm <br>
+            Tuesday 12:00pm <br>
+            Wednesday 6:00pm <br>
+            Thursday 6:00pm <br>
+            Friday 6:00pm <br>
+            Saturday 12:00pm <br>
+            Sunday 12:00pm </p>
+        </div>
+
+        <div class="movie-box">
+          <section class="movie_dispay-1">picture</section>
+          <section class="movie_dispay-1">times</section>
+        </div>
+
+        <div class="movie-box">
+          <section class="movie_dispay-1">picture</section>
+          <section class="movie_dispay-1">times</section>
+        </div>
+
+        <div class="movie-box">
+          <section class="movie_dispay-1">picture</section>
+          <section class="movie_dispay-1">times</section>
+        </div>
+
+
+
+
+      </div>
     </main>
 
     <footer>

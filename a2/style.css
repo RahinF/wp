@@ -34,8 +34,12 @@ nav a:hover {
   border-bottom: 4px solid #FF3B3F;
 }
 
-
-
+table, th, td {
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 5%;
+}
 
 #About_Us, #Prices, #Now_Showing{
   /* NOTE: sets section to occupy 100% of the viewport */
@@ -54,6 +58,49 @@ nav a:hover {
 #Now_Showing {
   background:purple;
 }
+
+.split-1 {
+  width: 100%;
+  border:2px solid black;
+  box-sizing:border-box;
+  background: green;
+}
+
+.split-2 {
+  width:50%;
+  float: left;
+  border:2px solid black;
+  box-sizing:border-box;
+}
+
+.split-3 {
+  width:50%;
+  float: right;
+  border:2px solid black;
+  box-sizing:border-box;
+}
+
+.Img_Seats {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.movie_dispay-1 {
+  float: left;
+  width: 50%;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.movie-box {
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+
 
 footer {
   padding-left: 5%;
