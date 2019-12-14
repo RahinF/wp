@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' class="container">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Assignment 2</title>
-    
+
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
@@ -14,18 +14,27 @@
   <body>
 
     <header>
-      <div>Put company logo and name here</div>
+      <div>
+        <img href="logo.png" alt="Lunardo Logo"></img>
+        <h1>Lunardo</h1>
+      </div>
     </header>
 
     <nav>
-      <div>Put website navigation links here</div>
+      <div>
+
+        <ul>
+          <li><a href="#About_Us">About Us</a></li>
+          <li><a href="#Prices">Prices</a></li>
+          <li><a href="#Now_Showing">Now Showing</a></li>
+        </ul>
+    </div>
     </nav>
 
     <main>
-      <article id='Website Under Construction'>
-    <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-        <img src='../../media/website-under-construction.png' alt='Website Under Construction' />
-      </article>
+    <section id="About_Us">about us</section>
+    <article id="Prices">prices</article>
+    <section id="Now_Showing">now showing</section>
     </main>
 
     <footer>
