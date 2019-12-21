@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en' class="container">
+<html lang='en'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
 
     <header>
       <div>
-        <img href="logo.png" alt="Lunardo Logo"></img>
+        <img src="../../media/Logo.jpg" alt="Lunardo Logo">
         <h1>Lunardo</h1>
       </div>
     </header>
@@ -98,42 +98,121 @@
 
     </article>
 
-      <div id="Now_Showing">
-        <h1>Now showing</h1>
-
-        <div class="movie-box">
-          <section class="movie_dispay-1">picture</section>
-          <p class="movie_dispay-1">
-            <h5>Star Wars: The Rise of Skywalker</h5>
-            <h5>Rating: M</h5>
-            Monday 12:00pm <br>
-            Tuesday 12:00pm <br>
-            Wednesday 6:00pm <br>
-            Thursday 6:00pm <br>
-            Friday 6:00pm <br>
-            Saturday 12:00pm <br>
-            Sunday 12:00pm </p>
-        </div>
-
-        <div class="movie-box">
-          <section class="movie_dispay-1">picture</section>
-          <section class="movie_dispay-1">times</section>
-        </div>
-
-        <div class="movie-box">
-          <section class="movie_dispay-1">picture</section>
-          <section class="movie_dispay-1">times</section>
-        </div>
-
-        <div class="movie-box">
-          <section class="movie_dispay-1">picture</section>
-          <section class="movie_dispay-1">times</section>
-        </div>
 
 
 
+          <section id="Now_Showing">
+            
+            <h1>Now showing</h1>
+            <div class="movie-box">
+              <div class="movie_dispay-1">
+                <img height= '400px' src="../../media/SW_Poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
+              </div>
 
-      </div>
+              <div class="movie_dispay-1">
+                <h5>Star Wars: The Rise of Skywalker</h5>
+                <h5>Rating: M</h5>
+                <p>
+                  Monday 12:00pm <br>
+                  Tuesday 12:00pm <br>
+                  Wednesday 6:00pm <br>
+                  Thursday 6:00pm <br>
+                  Friday 6:00pm <br>
+                  Saturday 12:00pm <br>
+                  Sunday 12:00pm
+                </p>
+              </div>
+            </div>
+
+
+
+            <div class="movie-box">
+              <div class="movie_dispay-1">
+                <img height= '400px' src="../../media/SW_Poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
+              </div>
+
+              <div class="movie_dispay-1">
+                <h5>Star Wars: The Rise of Skywalker</h5>
+                <h5>Rating: M</h5>
+                <p>
+                  Monday 12:00pm <br>
+                  Tuesday 12:00pm <br>
+                  Wednesday 6:00pm <br>
+                  Thursday 6:00pm <br>
+                  Friday 6:00pm <br>
+                  Saturday 12:00pm <br>
+                  Sunday 12:00pm
+                </p>
+              </div>
+            </div>
+
+            <div class="movie-box">
+              <div class="movie_dispay-1">
+                <img height= '400px' src="../../media/SW_Poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
+              </div>
+
+              <div class="movie_dispay-1">
+                <h5>Star Wars: The Rise of Skywalker</h5>
+                <h5>Rating: M</h5>
+                <p>
+                  Monday 12:00pm <br>
+                  Tuesday 12:00pm <br>
+                  Wednesday 6:00pm <br>
+                  Thursday 6:00pm <br>
+                  Friday 6:00pm <br>
+                  Saturday 12:00pm <br>
+                  Sunday 12:00pm
+                </p>
+              </div>
+            </div>
+
+            <div class="movie-box">
+              <div class="movie_dispay-1">
+                <img height= '400px' src="../../media/SW_Poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
+              </div>
+
+              <div class="movie_dispay-1">
+                <h5>Star Wars: The Rise of Skywalker</h5>
+                <h5>Rating: M</h5>
+                <p>
+                  Monday 12:00pm <br>
+                  Tuesday 12:00pm <br>
+                  Wednesday 6:00pm <br>
+                  Thursday 6:00pm <br>
+                  Friday 6:00pm <br>
+                  Saturday 12:00pm <br>
+                  Sunday 12:00pm
+                </p>
+              </div>
+            </div>
+
+          <!--large display-->
+            <div class="large-box">
+              <div class="movie_dispay-1">
+                <img height= '400px' src="../../media/SW_Poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
+              </div>
+
+              <div class="movie_dispay-1">
+                <h5>Star Wars: The Rise of Skywalker</h5>
+                <h5>Rating: M</h5>
+                <p>
+                  Monday 12:00pm <br>
+                  Tuesday 12:00pm <br>
+                  Wednesday 6:00pm <br>
+                  Thursday 6:00pm <br>
+                  Friday 6:00pm <br>
+                  Saturday 12:00pm <br>
+                  Sunday 12:00pm
+                </p>
+              </div>
+            </div>
+
+
+
+        </section>
+
+
+
     </main>
 
     <footer>

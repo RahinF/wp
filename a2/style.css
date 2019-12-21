@@ -1,12 +1,35 @@
-.container {
-  width: 90%;
-  margin: auto;
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  font-family: Calibri;
+  font-size: 48px;
+}
+
+/* NOTE: Temporary */
+header img {
+  height: 100px;
+  width:200px;
+}
+
+body {
+  /*ref https://www.istockphoto.com/au/vector/beautiful-seamless-galaxy-texture-gm1023338406-274663745
+  background-image: url("../../media/BG.jpg");*/
+  background-color: gray;
+  margin: 0px;
 }
 
 nav {
-
-  background-color: #EFEFEF;
-  top:0px;
+  background-color: hsla(0,0%,93.7%, 0.95);
+  top:0;
   position: sticky;
 }
 
@@ -14,11 +37,11 @@ nav ul  {
   margin: 0px;
   padding: 16px;
   overflow: hidden;
+  text-align: center;
 }
 
 nav li {
 display: inline;
-
 }
 
 nav li a {
@@ -31,6 +54,7 @@ nav li a {
 }
 
 nav a:hover {
+  color: #000;
   border-bottom: 4px solid #FF3B3F;
 }
 
@@ -53,10 +77,19 @@ table, th, td {
 
 #Prices {
   background:#FF3B3F;
+
+background-image: url("../../media/Parallax_BG.jpg");
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #Now_Showing {
   background:purple;
+  text-align: center;
 }
 
 .split-1 {
@@ -85,26 +118,61 @@ table, th, td {
   width: 100%;
 }
 
-
-
 .movie_dispay-1 {
-  float: left;
-  width: 50%;
-  border: 1px solid black;
+  float:left;
+  border: 1px solid red;
   box-sizing: border-box;
+  font-family: Verdana;
+  text-align: center;
+  width: 50%;
+
 }
 
 .movie-box {
-  float: left;
-  box-sizing: border-box;
-  border: 1px solid white;
+  display: inline-block;
+  width: 45%;
+  height: auto;
+  min-height: 400px;
+  border: 1px solid blue;
+  box-sizing:border-box;
+  background:white;
+
 }
+
+.large-box {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  overflow: hidden;
+  border: 1px solid blue;
+  box-sizing:border-box;
+  background:white;
+
+}
+
+
+@media screen and (min-width: 500px) {
+  .movie-box {
+    min-width: 100%;
+  }
+
+
+@media screen and (min-width: 800px) {
+  .movie-box {
+    min-width: 48%;
+    box-sizing: border-box;
+    }
+
+}
+
 
 
 
 footer {
   padding-left: 5%;
   padding-right: 5%;
-  background: black;
-  color: white;
+  background-color: hsla(0,0%,93.7%, 0.95);
+  color:#565656;
+  font-family: Calibri;
 }
