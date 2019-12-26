@@ -1,3 +1,12 @@
+h1, h2, h4, h5, nav  {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, footer, .showcase-details ul li {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 18px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,24 +17,26 @@ header {
 
 header h1 {
   display: inline;
-  font-family: Calibri;
+  font-family: 'Courgette', cursive;
   font-size: 48px;
 }
 
-/* NOTE: Temporary */
 header img {
-  height: 50px;
-  width: 200px;
+  vertical-align: bottom;
+  margin-top: 10px;
 }
 
 body {
   margin: 0px;
+
 }
 
 nav {
-  background-color: hsla(0, 0%, 93.7%, 0.95);
+  background-color: hsla(0, 0%, 100%, 1);
   top: 0;
   position: sticky;
+  z-index: 1;
+  box-shadow: 0px 6px 5px hsla(0, 0%, 0%, 0.1);
 }
 
 nav ul {
@@ -43,13 +54,11 @@ nav li a {
   padding: 12px 16px;
   text-decoration: none;
   color: #565656;
-  font-size: 18px;
-  font-family: Calibri;
 }
 
 nav a:hover, #Prices ul li:hover {
-  color: #000;
-  border-bottom: 4px solid #FF3B3F;
+  color: #FF3B3F;
+  font-weight: bold;
 }
 
 #Prices ul {
@@ -65,7 +74,7 @@ nav a:hover, #Prices ul li:hover {
   text-decoration: none;
   color: #565656;
   font-size: 18px;
-  font-family: Calibri;
+  font-family: 'Tajawal', sans-serif;
 }
 
 #About_Us, #Prices, #Now_Showing {
@@ -73,20 +82,15 @@ nav a:hover, #Prices ul li:hover {
   min-height: 100vh;
 }
 
-#About_Us {}
-
 #Prices {
-  background: #FF3B3F;
-  background-image: url("../../media/Parallax_BG.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+background-color: #FF3B3F;
 }
+
 
 #Now_Showing {
   text-align: center;
 }
+
 
 .hero {
   width: 100%;
@@ -101,8 +105,9 @@ nav a:hover, #Prices ul li:hover {
 
 .hero-text {
   text-align: center;
-  color: white;
-  background-color: hsla(360, 100%, 0%, 0.5);
+  color: #fff;
+  background-color: hsla(360, 100%, 0%, 0.75);
+  width: 80%;
   /* FIXME:  */
   border-radius: 4px;
   top: 50%;
@@ -115,63 +120,85 @@ nav a:hover, #Prices ul li:hover {
 @media(min-width: 768px) {
   .flex-container {
     display: flex;
+    width: 90%;
+    margin: auto;
+  }
+
+  .flex-container-movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5% 0%;
+  }
+
+  .hero-text {
+    width: auto;
   }
 }
 
-.chairs_info {
-  order: 2;
-  flex: 2;
-  border: 1px solid black;
-  box-sizing: border-box;
+.chairs-info {
   color: black;
-  font-family: verdana;
+  text-align: center;
 }
 
-.chairs_standard {
-  order: 1;
-  flex: 1;
-}
-
-.chairs_premium {
-  order: 3;
-  flex: 1;
-}
-
-.chairs_standard, .chairs_premium {
-  background: red;
-  border: 1px solid black;
-  box-sizing: border-box;
+.chairs-standard, .chairs-premium {
+  text-align: center;
 }
 
 .chair-text {
-  color: white;
-  background-color: hsla(360, 100%, 0%, 0.85);
-  font-family: verdana;
+  color: #565656;
+  background-color: hsla(0, 0%, 93.7%, 0.95);
   padding: 20px;
-  width: inherit;
+  margin: 10px;
   border-radius: 0px 0px 4px 4px;
+}
+
+.projection-system {
+  background-image: url("../../media/Cinema.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.projection-system-text {
+  color: white;
+  background-color: red;
+  top: 90%;
+  position: relative;
 }
 
 /* NOTE: NOW SHOWING SECTION*/
 .movie-box {
-  background: hsla(0, 0%, 100%, 0.95);
-  height: 400px;
-  font-family: Calibri;
-  border: 1px solid black;
-  box-sizing: border-box;
+  background: hsla(0, 0%, 94%, 0.95);
+
 }
 
-.large-box {
-  background: hsla(0, 0%, 100%, 0.95);
-  height: 400px;
-  font-family: Calibri;
-  border: 1px solid black;
-  box-sizing: border-box;
+.showcase-details {
+  color: #000;
+  padding: 2% 0%;
+}
+
+.showcase-details ul li {
+  display: inline-block;
+  background-color: hsla(0, 0%, 93.7%, 0.95);
+  color: #565656;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.showcase-details ul li:hover {
+  background-color: #FF3B3F;
+  color: #FFF;
+  font-weight: bold;
+
 }
 
 footer {
+  padding: 20px 2%;
   background-color: hsla(0, 0%, 93.7%, 0.95);
   color: #565656;
-  font-family: Calibri;
   text-align: center;
 }
