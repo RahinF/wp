@@ -1,10 +1,15 @@
-h1, h2, h4, h5, nav  {
+h1, h2, h3, h4, h5, nav {
   font-family: 'Montserrat', sans-serif;
 }
 
-p, footer, .showcase-details ul li {
+p, footer, .synopsis ul li {
   font-family: 'Tajawal', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.section-heading {
+  font-size: 36px;
+  text-transform: uppercase;
 }
 
 html {
@@ -28,7 +33,6 @@ header img {
 
 body {
   margin: 0px;
-
 }
 
 nav {
@@ -46,7 +50,7 @@ nav ul {
   text-align: center;
 }
 
-nav li, #Prices ul li {
+nav li {
   display: inline;
 }
 
@@ -56,47 +60,68 @@ nav li a {
   color: #565656;
 }
 
-nav a:hover, #Prices ul li:hover {
+nav a:hover {
   color: #FF3B3F;
   font-weight: bold;
 }
 
-#Prices ul {
+/* prices SECTION */
+.price-box {
   background-color: hsla(0, 0%, 93.7%, 0.95);
-  margin: 0px;
-  padding: 16px;
-  overflow: hidden;
-  text-align: center;
-}
-
-#Prices ul li {
-  padding: 12px 16px;
-  text-decoration: none;
+  box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
   color: #565656;
   font-size: 18px;
   font-family: 'Tajawal', sans-serif;
 }
 
-#About_Us, #Prices, #Now_Showing {
-  /* NOTE: sets section to occupy 100% of the viewport */
+#prices {
+  /* image from: https://www.idownloadblog.com/2019/09/04/iphone-movie-theater-apps-tickets/ */
+  background: url('../../media/dust_scratches.png');
+  padding-bottom: 5%;
+  box-shadow: 0px 6px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+.price-text {
+  padding-top: 3%;
+}
+
+.price-box h2 {
+  background: #FF3B3F;
+  font-size: 22px;
+  margin: 0 auto;
+  color: #FFF;
+  padding: 20px 0px;
+}
+
+.price-box ul {
+  padding: 20px;
+  margin: auto;
+}
+
+.price-box ul li {
+  display: block;
+  padding: 10px 10px;
+  text-align: left;
+}
+
+.ticket-price {
+  background-color: #FF3B3F;
+  color: #FFF;
+  padding: 4px 20px;
+  margin: 0px 4px;
+  border-radius: 18px;
+  float: right;
+}
+
+#about-us, #prices, #now-showing {
   min-height: 100vh;
-}
-
-#Prices {
-background-color: #FF3B3F;
-}
-
-
-#Now_Showing {
   text-align: center;
 }
 
-
 .hero {
-  width: 100%;
   height: 100vh;
-  /* temp */
-  background-image: url("../../media/Cinema.jpg");
+  /* image from: https://www.wheretraveler.com/sydney/eat/sydney-s-quirkiest-cinemas-memorable-experiences-movies */
+  background-image: url("../../media/hero.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,24 +129,203 @@ background-color: #FF3B3F;
 }
 
 .hero-text {
-  text-align: center;
   color: #fff;
   background-color: hsla(360, 100%, 0%, 0.75);
   width: 80%;
-  /* FIXME:  */
-  border-radius: 4px;
+  border-radius: 8px;
   top: 50%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
   padding: 20px;
+  font-size: 40px;
 }
 
-@media(min-width: 768px) {
+.hero-text h1 {
+  text-transform: uppercase;
+}
+
+.hero-text p {
+  font-size: 32px;
+}
+
+/* SEATING SECTION*/
+.chairs-info {
+  color: black;
+  padding: 3% 0%;
+  background: url('../../media/dust_scratches.png');
+}
+
+.chairs-info img {
+  margin-top: 4%;
+  height: 400px;
+}
+
+.chair-text h2 {
+  background-color: #FF3B3F;
+  color: #FFF;
+  padding: 20px 0px;
+  margin: 0 auto;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.chair-text {
+  margin: 20px;
+  box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
+  border-radius: 8px 8px 18px 18px;
+}
+
+.chair-text p {
+  margin: 0 auto;
+  color: #565656;
+  background-color: hsla(0, 0%, 93.7%, 0.95);
+  padding: 20px 20px;
+  border-radius: 8px 8px 18px 18px;
+}
+
+/* DOLBY SYSTEMS */
+.dolby-systems {
+  padding: 3% 0%;
+  background: url('../../media/5-dots.png');
+  color: #FFF;
+}
+
+.dolby-1, .dolby-2 {
+  padding: 3% 0%;
+  width: 90%;
+  margin: auto;
+}
+
+.dolby-1 img, .dolby-2 img {
+  width: 100%;
+}
+
+.dolby-1 div {
+  order: 2;
+}
+
+.dolby-1 img {
+  order: 1;
+}
+
+.dolby-2 div {
+  order: 1;
+}
+
+.dolby-2 img {
+  order: 2;
+}
+
+/* NOW SHOWING SECTION */
+#now-showing {
+  background: url('../../media/5-dots.png');
+}
+
+.movie-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsla(0, 0%, 93.7%, 0.95);
+  padding: 20px;
+  width: inherit;
+  margin: 2% auto;
+  color: #565656;
+}
+
+.movie-text {
+  align-items: flex-end;
+}
+
+.movie-box img {
+  margin-top: 5%;
+  align-items: flex-start;
+  padding: 3%;
+}
+
+#now-showing h1 {
+  margin: 0;
+  padding: 4%;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+#now-showing img {
+  height: 300px;
+}
+
+.synopsis {
+  padding: 4% 0%;
+  background: url('../../media/dust_scratches.png');
+}
+
+.synopsis iframe {
+  width: 90%;
+}
+
+.synopsis ul {
+  padding: 0;
+  width: 90%;
+  margin: auto;
+}
+
+.synopsis ul li {
+  display: inline-block;
+  background-color: #FF3B3F;
+  color: #FFF;
+  padding: 10px;
+  margin: 1% auto;
+  border-radius: 18px;
+}
+
+footer {
+  padding: 20px 2%;
+  background: url('../../media/5-dots.png');
+  color: #FFF;
+}
+
+@media (min-width: 800px) and (max-width: 1500px) {
+  .flex-container-movies .movie-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 44%;
+  }
+
+  .dolby-systems div {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  .dolby-1 img, .dolby-2 img {
+    max-height: 400px;
+    width: auto;
+  }
+
+  .price-box {
+    width: 33%;
+  }
+
+  .price-box ul li span {
+    margin: 1px;
+  }
+
+  .price-box ul li {
+    display: inline-block;
+    padding: 10px 0px;
+    width: 100%;
+  }
+}
+
+/* WHEN THE SCREEN IS BIGGER THAN THIS NUMBER*/
+@media(min-width: 800px) {
   .flex-container {
     display: flex;
     width: 90%;
     margin: auto;
+  }
+
+  .chair-box {
+    width: 50%;
   }
 
   .flex-container-movies {
@@ -129,76 +333,60 @@ background-color: #FF3B3F;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    margin: 5% 0%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+  }
+
+  .movie-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 22%;
+    border-radius: 8px;
+    color: #565656;
+  }
+
+  .flex-container-price {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .dolby-1, .dolby-2 {
+    display: flex;
+    width: 80%;
+    margin: auto;
+  }
+
+  .dolby-1 h1, .dolby-2 h1 {
+    padding: 5% 5% 0% 5%;
+  }
+
+  .dolby-1 p, .dolby-2 p {
+    padding: 0% 5%;
+  }
+
+  .dolby-1 img, .dolby-2 img {
+    max-height: 400px;
+    width: auto;
   }
 
   .hero-text {
     width: auto;
   }
-}
 
-.chairs-info {
-  color: black;
-  text-align: center;
-}
+  .synopsis iframe {
+    width: 560px;
+    height: 315px;
+  }
 
-.chairs-standard, .chairs-premium {
-  text-align: center;
-}
+  .price-box {
+    border-radius: 8px 8px 18px 18px;
+  }
 
-.chair-text {
-  color: #565656;
-  background-color: hsla(0, 0%, 93.7%, 0.95);
-  padding: 20px;
-  margin: 10px;
-  border-radius: 0px 0px 4px 4px;
-}
-
-.projection-system {
-  background-image: url("../../media/Cinema.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-  position: relative;
-}
-
-.projection-system-text {
-  color: white;
-  background-color: red;
-  top: 90%;
-  position: relative;
-}
-
-/* NOTE: NOW SHOWING SECTION*/
-.movie-box {
-  background: hsla(0, 0%, 94%, 0.95);
-
-}
-
-.showcase-details {
-  color: #000;
-  padding: 2% 0%;
-}
-
-.showcase-details ul li {
-  display: inline-block;
-  background-color: hsla(0, 0%, 93.7%, 0.95);
-  color: #565656;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.showcase-details ul li:hover {
-  background-color: #FF3B3F;
-  color: #FFF;
-  font-weight: bold;
-
-}
-
-footer {
-  padding: 20px 2%;
-  background-color: hsla(0, 0%, 93.7%, 0.95);
-  color: #565656;
-  text-align: center;
+  .price-box h2 {
+    border-radius: 8px 8px 0px 0px;
+  }
 }
