@@ -1,3 +1,8 @@
+/*
+Pattern images:
+https://www.toptal.com/designers/subtlepatterns/5-dots-pattern/
+https://www.toptal.com/designers/subtlepatterns/dust-scratches/
+*/
 h1, h2, h3, h4, h5, nav {
   font-family: 'Montserrat', sans-serif;
 }
@@ -75,7 +80,6 @@ nav a:hover {
 }
 
 #prices {
-  /* image from: https://www.idownloadblog.com/2019/09/04/iphone-movie-theater-apps-tickets/ */
   background: url('../../media/dust_scratches.png');
   padding-bottom: 5%;
   box-shadow: 0px 6px 5px hsla(0, 0%, 0%, 0.1);
@@ -133,7 +137,7 @@ nav a:hover {
   background-color: hsla(360, 100%, 0%, 0.75);
   width: 80%;
   border-radius: 8px;
-  top: 50%;
+  top: 60%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -282,11 +286,12 @@ footer {
   color: #FFF;
 }
 
+footer a {
+  color: #FF3B3F;
+}
+
 @media (min-width: 800px) and (max-width: 1500px) {
   .flex-container-movies .movie-box {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
     width: 44%;
   }
 
@@ -338,12 +343,8 @@ footer {
   }
 
   .movie-box {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
     width: 22%;
     border-radius: 8px;
-    color: #565656;
   }
 
   .flex-container-price {
@@ -357,7 +358,6 @@ footer {
   .dolby-1, .dolby-2 {
     display: flex;
     width: 80%;
-    margin: auto;
   }
 
   .dolby-1 h1, .dolby-2 h1 {

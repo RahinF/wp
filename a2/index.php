@@ -45,72 +45,71 @@
           <p>Our cinema have been upgraded with the latest technology to ensure that you can enjoying the latest and greatest movies in the best way possible.</p>
         </div>
       </div>
-      <div>
 
 
+      <div class="chairs-info">
+        <h1 class="section-heading">New and improved seating</h1>
+        <p>Now introducing our brand new seating options. Experience different levels of comfort with our latest standard and premium seating options.</p>
 
 
-        <div class="chairs-info">
-          <h1 class="section-heading">New and improved seating</h1>
-          <p>Now introducing our brand new seating options. Experience different levels of comfort with our latest standard and premium seating options.</p>
+        <div class="flex-container">
 
-
-          <div class="flex-container">
-
-            <div class="chair-box">
-              <img src="../../media/538.png" alt="Standard seats">
-              <div class="chair-text">
-                <h2>Paragon 538</h2>
-                <p>With a distinctive headrest and a contoured backrest, the Paragon 538 cinema seat delivers outstanding comfort.</p>
-              </div>
+          <div class="chair-box">
+            <img src="../../media/538.png" alt="Standard seats">
+            <div class="chair-text">
+              <h2>Paragon 538</h2>
+              <!-- description from: https://www.fercoseating.com/products/paragon-collection/paragon-538_cinema_seat/ -->
+              <p>With a distinctive headrest and a contoured backrest, the Paragon 538 cinema seat delivers outstanding comfort.</p>
             </div>
-
-            <div class="chair-box">
-              <img src="../../media/Verona-Twin.png" alt="Premium seats">
-              <div class="chair-text">
-                <h2>Verona Zero Wall</h2>
-                <p>Performance, practicality and style are beautifully combined to enhance the cinematic experience and exceed the expectations of even the most demanding movie-goers.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="dolby-systems">
-
-
-          <h1 class="section-heading">Dolby systems</h1>
-          <p>The projection and sound systems are upgraded with 3D Dolby Vision projection and Dolby Atmos sound.</p>
-          <div class="dolby-1">
-            <div>
-              <h1>Moving Audio</h1>
-              <p>Dolby Atmos® is an industry-leading audio technology that delivers powerful, moving audio that flows all around you, even from above and behind. Up to 128 individual sounds can be precisely placed and moved throughout the cinema with
-                lifelike depth, detail, and clarity, putting you at the center of the story.</p>
-            </div>
-            <img src="../../media/s.jpg" alt="Dolby Moving Audio image">
-
           </div>
 
-
-          <div class="dolby-2">
-            <div>
-              <h1>Dramatic Imaging</h1>
-              <p>Dolby Vision™ was designed for the cinema to deliver incredible color, a million-to-one contrast ratio, and twice the brightness of standard screens. Powered by dual-laser projection technology and engineered for a consistent
-                experience, Dolby Vision lets you see more of the story.</p>
+          <div class="chair-box">
+            <img src="../../media/Verona-Twin.png" alt="Premium seats">
+            <div class="chair-text">
+              <h2>Verona Zero Wall</h2>
+              <!-- description from: https://www.fercoseating.com/products/premium-collection/verona-zero-wall_reclining_cinema_seat/-->
+              <p>Performance, practicality and style are beautifully combined to enhance the cinematic experience and exceed the expectations of even the most demanding movie-goers.</p>
             </div>
-
-            <img src="../../media/v.jpg" alt="Dolby Dramatic Imaging image">
           </div>
 
         </div>
+      </div>
+
+      <div class="dolby-systems">
+        <!-- description from: https://www.dolby.com/us/en/platforms/dolby-cinema.html-->
+        <h1 class="section-heading">Dolby systems</h1>
+        <p>The projection and sound systems are upgraded with 3D Dolby Vision projection and Dolby Atmos sound.</p>
+
+
+        <div class="dolby-1">
+          <div>
+            <h1>Dolby Atmos</h1>
+            <p>An industry-leading audio technology that delivers powerful, moving audio that flows all around you, even from above and behind. Up to 128 individual sounds can be precisely placed and moved throughout the cinema with
+              lifelike depth, detail, and clarity, putting you at the center of the story.</p>
+          </div>
+          <img src="../../media/s.jpg" alt="Dolby Moving Audio image">
+        </div>
+
+
+        <div class="dolby-2">
+          <div>
+            <h1>Dolby Vision</h1>
+            <p>Designed for the cinema to deliver incredible color, a million-to-one contrast ratio, and twice the brightness of standard screens. Powered by dual-laser projection technology and engineered for a consistent
+              experience, Dolby Vision lets you see more of the story.</p>
+          </div>
+          <!-- image from: https://www.trustedreviews.com/news/dolby-vision-hdr-guide-3168479 -->
+          <img src="../../media/dolby-vision.jpg" alt="Dolby Dramatic Imaging image">
+        </div>
+
+      </div>
 
 
     </section>
 
     <section id="prices">
       <div class="price-text">
-        <h1 class="section-heading">Prices</h1>
-        <p>On x days ticket prices are discounted!</p>
+        <h1 class="section-heading">Ticket Prices</h1>
+        <p>On select days ticket prices are discounted!</p>
       </div>
 
 
@@ -219,14 +218,7 @@
         </div>
 
       </div>
-
-
-
     </section>
-
-
-
-
 
 
     <section id="now-showing">
@@ -254,7 +246,7 @@
         </div>
 
         <div class="movie-box">
-          <img width="200px" src="../../media/Frozen-2.jpg" alt="Frozen 2 movie poster">
+          <img src="../../media/Frozen-2-poster.jpg" alt="Frozen 2 movie poster">
 
           <div class="movie-text">
             <h4>Frozen 2</h4>
@@ -312,22 +304,18 @@
 
 
       <div class="synopsis">
-        <div class="flex-container">
 
+        <div class="flex-container">
           <div class="movie-text">
             <h2>Star Wars: The Rise of Skywalker</h2>
             <h3>Rating: M</h3>
             <p>The surviving Resistance faces the First Order once more as Rey, Finn and Poe Dameron's journey continues. With the power and knowledge of generations behind them, the final battle commences.</p>
-
-
           </div>
-
           <div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/14EztMXh5vQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-
-
         </div>
+
         <ul>
           <li>Monday 12:00pm</li>
           <li>Tuesday 12:00pm</li>
@@ -349,7 +337,7 @@
     <ul>
       <li>Contact email: lunardocinema@lundaro.com.au</li>
       <li>Phone: (03) 9123 4567</li>
-      <li>Address: 123 dummy st, dummy, Australia</li>
+      <li>Address: Daylesford, victoria</li>
     </ul>
     <div>&copy;<script>
         document.write(new Date().getFullYear());
