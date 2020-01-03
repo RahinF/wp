@@ -337,7 +337,7 @@
     <ul>
       <li>Contact email: lunardocinema@lundaro.com.au</li>
       <li>Phone: (03) 9123 4567</li>
-      <li>Address: Daylesford, victoria</li>
+      <li>Address: Daylesford, Victoria</li>
     </ul>
     <div>&copy;<script>
         document.write(new Date().getFullYear());
