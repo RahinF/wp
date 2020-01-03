@@ -64,7 +64,7 @@
           </div>
 
           <div class="chair-box">
-            <img src="../../media/Verona-Twin.png" alt="Premium seats">
+            <img src="../../media/verona-twin.png" alt="Premium seats">
             <div class="chair-text">
               <h2>Verona Zero Wall</h2>
               <!-- description from: https://www.fercoseating.com/products/premium-collection/verona-zero-wall_reclining_cinema_seat/-->
@@ -87,7 +87,7 @@
             <p>An industry-leading audio technology that delivers powerful, moving audio that flows all around you, even from above and behind. Up to 128 individual sounds can be precisely placed and moved throughout the cinema with
               lifelike depth, detail, and clarity, putting you at the center of the story.</p>
           </div>
-          <img src="../../media/s.jpg" alt="Dolby Moving Audio image">
+          <img src="../../media/sound-waves.jpg" alt="Dolby Moving Audio image">
         </div>
 
 
@@ -228,7 +228,7 @@
       <div class="flex-container-movies">
 
         <div class="movie-box">
-          <img src="../../media/SW_Poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
+          <img src="../../media/SW-poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
 
           <div class="movie-text">
             <h4>Star Wars: The Rise of Skywalker</h4>
@@ -246,7 +246,7 @@
         </div>
 
         <div class="movie-box">
-          <img src="../../media/Frozen-2-poster.jpg" alt="Frozen 2 movie poster">
+          <img src="../../media/frozen-2-poster.jpg" alt="Frozen 2 movie poster">
 
           <div class="movie-text">
             <h4>Frozen 2</h4>
@@ -264,7 +264,7 @@
         </div>
 
         <div class="movie-box">
-          <img src="../../media/Aeronauts.jpg" alt="The Aeronauts movie poster">
+          <img src="../../media/aeronauts-poster.jpg" alt="The Aeronauts movie poster">
           <div class="movie-text">
             <h4>The Aeronauts</h4>
             <h5>Rating: PG</h5>
@@ -281,7 +281,7 @@
         </div>
 
         <div class="movie-box">
-          <img src="../../media/Jojo_Rabbit.jpg" alt="JoJo Rabbit movie poster">
+          <img src="../../media/jojo-rabbit-poster.jpg" alt="JoJo Rabbit movie poster">
           <div class="movie-text">
             <h4>JoJo Rabbit</h4>
             <h5>Rating: PG</h5>
