@@ -249,11 +249,7 @@ nav a:hover {
   background: url('../../media/5-dots.png');
 }
 
-
-
-
-
-#now-showing h1 {
+#now-showing>h1 {
   margin: 0;
   padding: 4%;
   color: #FFF;
@@ -298,7 +294,6 @@ footer a {
 }
 
 @media (min-width: 800px) and (max-width: 1500px) {
-
   .dolby-systems div {
     display: block;
     width: 90%;
@@ -341,8 +336,6 @@ footer a {
     display: grid;
     grid-template-columns: auto auto auto auto;
   }
-
-
 
   .flex-container-price {
     display: flex;
@@ -460,8 +453,6 @@ button:focus {
   margin: auto;
 }
 
-
-
 .overlay {
   position: absolute;
   top: 0;
@@ -479,30 +470,56 @@ button:focus {
 }
 
 .movie-box h1 {
-  color: white;
+  color: #FFF;
   position: absolute;
-  bottom: 15%;
+  bottom: 0%;
   left: 0%;
   background-color: hsla(360, 100%, 0%, 0.75);
+  padding: 3%;
+  box-sizing: border-box;
+  margin: auto;
   width: 100%;
-
+  text-transform: uppercase;
 }
 
 .movie-box h5 {
   color: white;
   position: absolute;
-  bottom: 15%;
-  left: 50%;
+  bottom: 0%;
+  right: 0%;
+  padding: 0% 3%;
 }
 
 .movie-text {
+  width: inherit;
+  background-color: hsla(360, 100%, 0%, 0.75);
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  bottom: 20%;
   text-align: center;
+}
+
+.ml {
+  padding: 0;
+  margin: 0;
+}
+
+.ml li {
+  display: inline-block;
+  padding: 10px;
+  color: #FFF;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.movie-name {
+  display: none;
+}
+
+#booking-section {
+  display: none;
+}
+
+input {
+  display: block;
 }

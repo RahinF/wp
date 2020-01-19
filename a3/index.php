@@ -123,7 +123,7 @@
             <li>Monday: <span class='ticket-price'> $15 </span></li>
             <li>Tuesday: <span class='ticket-price'> $15</span></li>
             <li>Wednesday: <span class='ticket-price'>12pm $15</span>
-              <span class='ticket-price'>After 12pm $20.50</span></li>
+              <span class='ticket-price'>after 12pm $20.50</span></li>
             <li>Thursday: <span class='ticket-price'>12pm $15</span>
               <span class='ticket-price'>after 12pm $20.50</span></li>
             <li>Friday: <span class='ticket-price'>12pm $15</span>
@@ -179,7 +179,7 @@
               <span class='ticket-price'>after 12pm $30</span></li>
             <li>Thursday: <span class='ticket-price'>12pm $25</span>
               <span class='ticket-price'>after 12pm $30</span></li>
-            <li>Friday: <span class='ticket-price'>12pm $15</span>
+            <li>Friday: <span class='ticket-price'>12pm $25</span>
               <span class='ticket-price'>after 12pm $30</span></li>
             <li>Saturday: <span class='ticket-price'> $30</span></li>
             <li>Sunday: <span class='ticket-price'> $30</span></li>
@@ -228,72 +228,76 @@
 
       <div class="now-showing-grid">
 
-        <div class="movie-box" id="moviePanelACT" onclick="inputMovieID(this), openSynopsis('synopsisSW')">
-          <img src="../../media/SW-poster.png" alt="Star Wars: The Rise of Skywalker movie poster">
-
-          <div class="movie-text">
-            <h3>Star Wars: The Rise of Skywalker</h3>
-            <h5>Rating: M</h5>
-            <p>
-              Monday 12:00pm <br>
-              Tuesday 12:00pm <br>
-              Wednesday 6:00pm <br>
-              Thursday 6:00pm <br>
-              Friday 6:00pm <br>
-              Saturday 12:00pm <br>
-              Sunday 12:00pm
-            </p>
+        <div class="movie-box" id="moviePanelACT" onclick="inputGenreACT(); openSynopsis('synopsisSW');openBooking('bookingSW')">
+          <img src="../../media/sw.jpg" alt="Star Wars: The Rise of Skywalker movie poster">
+          <h1>Star Wars: The Rise of Skywalker</h1>
+          <h5>Rating: M</h5>
+          <div class="overlay">
+            <div class="movie-text">
+              <ul class="ml">
+                <li><div>Mon</div><span>12pm</span></li>
+                <li><div>Tue</div><span>12pm</span></li>
+                <li><div>Wed</div><span>6pm</span></li>
+                <li><div>Thur</div><span>6pm</span></li>
+                <li><div>Fri</div><span>6pm</span></li>
+                <li><div>Sat</div><span>12pm</span></li>
+                <li><div>Sun</div><span>12pm</span></li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="movie-box" id="moviePanelANM" onclick="inputMovieID(this), openSynopsis('synopsisF2')">
+        <div class="movie-box" id="moviePanelANM" onclick="inputGenreANM(); openSynopsis('synopsisF2'); openBooking('bookingF2')">
           <img src="../../media/f2.jpg" alt="Frozen 2 movie poster">
           <h1>Frozen 2</h1>
           <h5>Rating: PG</h5>
           <div class="overlay">
             <div class="movie-text">
-              <p>
-                Wednesday 9:00pm <br>
-                Thursday 9:00pm <br>
-                Friday 9:00pm <br>
-                Saturday 6:00pm <br>
-                Sunday 6:00pm
-              </p>
+              <ul class="ml">
+                <li><div>Wed</div><span>9pm</span></li>
+                <li><div>Thur</div><span>9pm</span></li>
+                <li><div>Fri</div><span>9pm</span></li>
+                <li><div>Sat</div><span>6pm</span></li>
+                <li><div>Sun</div><span>6pm</span></li>
+              </ul>
             </div>
           </div>
         </div>
 
 
-        <div class="movie-box" id="moviePanelRMC" onclick="inputMovieID(this), openSynopsis('synopsisTA')">
+        <div class="movie-box" id="moviePanelRMC" onclick="inputGenreRMC(); openSynopsis('synopsisTA');openBooking('bookingTA')">
           <img src="../../media/aeronauts-poster.jpg" alt="The Aeronauts movie poster">
-          <div class="movie-text">
-            <h3>The Aeronauts</h3>
-            <h5>Rating: PG</h5>
-            <p>
-              Monday 6:00pm <br>
-              Tuesday 6:00pm <br>
-              Saturday 3:00pm <br>
-              Sunday 3:00pm
-            </p>
+          <h1>The Aeronauts</h1>
+          <h5>Rating: PG</h5>
+          <div class="overlay">
+            <div class="movie-text">
+              <ul class="ml">
+                <li><div>Mon</div><span>6pm</span></li>
+                <li><div>Tue</div><span>6pm</span></li>
+                <li><div>Sat</div><span>3pm</span></li>
+                <li><div>Sun</div><span>3pm</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="movie-box" id="moviePanelAHF" onclick="inputMovieID(this), openSynopsis('synopsisJR')">
+        <div class="movie-box" id="moviePanelAHF" onclick="inputGenreAHF(); openSynopsis('synopsisJR');openBooking('bookingJR')">
           <img src="../../media/jojo-rabbit-poster.jpg" alt="JoJo Rabbit movie poster">
           <h1>JoJo Rabbit</h1>
           <h5>Rating: PG</h5>
           <div class="overlay">
             <div class="movie-text">
-              <p>
-                Wednesday 12:00pm <br>
-                Thursday 12:00pm <br>
-                Friday 12:00pm <br>
-                Saturday 9:00pm <br>
-                Sunday 9:00pm
-              </p>
-            </div>
+              <ul class="ml">
+                <li><div>Wed</div><span>12pm</span></li>
+                <li><div>Thur</div><span>12pm</span></li>
+                <li><div>Fri</div><span>12pm</span></li>
+                <li><div>Sat</div><span>9pm</span></li>
+                <li><div>Sun</div><span>9pm</span></li>
+              </ul>
           </div>
         </div>
+      </div>
+
       </div>
 
 
@@ -323,10 +327,11 @@
           <div>
             <h2>Frozen 2</h2>
             <h3>Rating: PG</h3>
-            <p>Elsa the Snow Queen has an extraordinary gift -- the power to create ice and snow. But no matter how happy she is to be surrounded by the people of Arendelle, Elsa finds herself strangely unsettled. After hearing a mysterious voice call out to her, Elsa travels to the enchanted forests and dark seas beyond her kingdom -- an adventure that soon turns into a journey of self-discovery.</p>
+            <p>Elsa the Snow Queen has an extraordinary gift -- the power to create ice and snow. But no matter how happy she is to be surrounded by the people of Arendelle, Elsa finds herself strangely unsettled. After hearing a mysterious voice
+              call out to her, Elsa travels to the enchanted forests and dark seas beyond her kingdom -- an adventure that soon turns into a journey of self-discovery.</p>
           </div>
           <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/14EztMXh5vQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zi4LMpSDccc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <button type="button" name="button" onclick="input9pm();inputWednesday()">Wednesday 9:00pm</button>
           <button type="button" name="button" onclick="input9pm();inputThursday()">Thursday 9:00pm</button>
@@ -339,10 +344,11 @@
           <div>
             <h2>The Aeronauts</h2>
             <h3>Rating: PG</h3>
-            <p>In 1862 headstrong scientist James Glaisher and wealthy young widow Amelia Wren mount a balloon expedition to fly higher than anyone in history. As their perilous ascent reduces their chances of survival, the unlikely duo soon discover things about themselves -- and each other -- that help both of them find their place in the world.</p>
+            <p>In 1862 headstrong scientist James Glaisher and wealthy young widow Amelia Wren mount a balloon expedition to fly higher than anyone in history. As their perilous ascent reduces their chances of survival, the unlikely duo soon discover
+              things about themselves -- and each other -- that help both of them find their place in the world.</p>
           </div>
           <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/14EztMXh5vQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Rm4VnwCtQO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <button type="button" name="button" onclick="input6pm();inputMonday()">
             <div>Monday<div><span>6:00pm</span>
@@ -356,40 +362,47 @@
           <div>
             <h2>JoJo Rabbit</h2>
             <h3>Rating: PG</h3>
-            <p>Jojo is a lonely German boy who discovers that his single mother is hiding a Jewish girl in their attic. Aided only by his imaginary friend -- Adolf Hitler -- Jojo must confront his blind nationalism as World War II continues to rage on.</p>
+            <p>Jojo is a lonely German boy who discovers that his single mother is hiding a Jewish girl in their attic. Aided only by his imaginary friend -- Adolf Hitler -- Jojo must confront his blind nationalism as World War II continues to rage
+              on.</p>
           </div>
           <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/14EztMXh5vQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/tL4McUzXfFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <button type="button" name="button" onclick="input12pm();inputWednesday()">Wednesday 12:00pm</button>
-          <button type="button" name="button" onclick="input12pm();inputThursday()">Thursday 12:00pm</button>
-          <button type="button" name="button" onclick="input12pm();inputFriday()">Friday 12:00pm</button>
-          <button type="button" name="button" onclick="input9pm();inputSaturday()">Saturday 9:00pm</button>
-          <button type="button" name="button" onclick="input9pm();inputSunday()">Sunday 9:00pm</button>
+
+            <button type="button" name="button" onclick="input12pm();inputWednesday()">Wednesday 12:00pm</button>
+            <button type="button" name="button" onclick="input12pm();inputThursday()">Thursday 12:00pm</button>
+            <button type="button" name="button" onclick="input12pm();inputFriday()">Friday 12:00pm</button>
+            <button type="button" name="button" onclick="input9pm();inputSaturday()">Saturday 9:00pm</button>
+            <button type="button" name="button" onclick="input9pm();inputSunday()">Sunday 9:00pm</button>
+
+
         </div>
       </div>
 
 
-      <div class="grid-box">
+      <div id="booking-section">
         <div>
-          <div>
-            <p>movie 1</p>
-          </div>
-          <div>
-            <p>movie 2</p>
-          </div>
-          <div>
-            <p>movie 3</p>
-          </div>
-          <div>
-            <p>movie 4</p>
-          </div>
-          <form target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+          <h1 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker</h1>
+          <h1 id="bookingF2" class="movie-name">Frozen 2</h1>
+          <h1 id="bookingTA" class="movie-name">The Aeronauts</h1>
+          <h1 id="bookingJR" class="movie-name">JoJo Rabbit</h1>
 
-            <fieldset class="grid-item">
+        <span id="booking-day"></span>
+        <span id="booking-hour"></span>
+
+
+      </div>
+
+          <form  class="grid-box" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+
+
+          <div class="grid-item">
+
+
+            <fieldset>
               <legend>Standard</legend>
               Adults
-              <select id="seats[STA]" name="seats[STA]">
+              <select id="seats[STA]" name="seats[STA]" onchange="calcTotalPrice()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -401,8 +414,8 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
               </select>
-              consession
-              <select id="seats[STP]" name="seats[STP]">
+              Consession
+              <select id="seats[STP]" name="seats[STP]" onchange="calcTotalPrice()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -414,8 +427,8 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
               </select>
-              children
-              <select id="seats[STC]" name="seats[STC]">
+              Children
+              <select id="seats[STC]" name="seats[STC]" onchange="calcTotalPrice()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -429,10 +442,10 @@
               </select>
             </fieldset>
 
-            <fieldset class="grid-item">
+            <fieldset>
               <legend>First Class</legend>
-              adults
-              <select id="seats[FCA]" name="seats[FCA]">
+              Adults
+              <select id="seats[FCA]" name="seats[FCA]" onchange="calcTotalPrice()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -444,8 +457,8 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
               </select>
-              consession
-              <select id="seats[FCP]" name="seats[FCP]">
+              Consession
+              <select id="seats[FCP]" name="seats[FCP]" onchange="calcTotalPrice()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -457,8 +470,8 @@
                 <option value="8">8</option>
                 <option value="9">9</option>
               </select>
-              children
-              <select id="seats[FCC]" name="seats[FCC]">
+              Children
+              <select id="seats[FCC]" name="seats[FCC]" onchange="calcTotalPrice()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -471,27 +484,28 @@
                 <option value="9">9</option>
               </select>
             </fieldset>
-
-            <fieldset class="grid-item">
+</div><div class="grid-item">
+            <fieldset >
               <legend>Customer</legend>
-              <input id="movie[id]" type="text" name="movie[id]">
-              <input id="movie[day]" type="text" name="movie[day]">
-              <input id="movie[hour]" type="text" name="movie[hour]">
-              <label for="cust[name]">Name</label><input id="cust[name]" type="text" name="cust[name]">
-              <label for="cust[email]">Email</label><input id="cust[email]" type="email" name="cust[email]">
-              <label for="cust[mobile]">Mobile</label><input id="cust[mobile]" type="tel" name="cust[mobile]" pattern="^04+[0-9]{8}">
-              <label for="cust[card]">Credit Card</label><input id="cust[card]" type="text" name="cust[card]">
-              Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM">
+              <input id="movie[id]" type="hidden" name="movie[id]">
+              <input id="movie[day]" type="hidden" name="movie[day]">
+              <input id="movie[hour]" type="hidden" name="movie[hour]">
+              <label for="cust[name]">Name: </label><input id="cust[name]" type="text" name="cust[name]" pattern="^[a-zA-Z \-.']+$">
+              <label for="cust[email]">Email: </label><input id="cust[email]" type="email" name="cust[email]">
+              <label for="cust[mobile]">Mobile: </label><input id="cust[mobile]" type="tel" name="cust[mobile]" pattern="^(\(04\)|04|\+614)( ?\d){8}$">
+              <label for="cust[card]">Credit Card: </label><input id="cust[card]" type="text" name="cust[card]">
+              Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" pattern="^[0-9]{4}\-[0-9]{2}$">
             </fieldset>
 
-<div class="grid-item">
-  total<span></span>
-</div>
+            <div class="grid-item">
 
+              Total: <span id="total-price"></span>
+            </div>
             <input type="submit" value="Order">
+            </div>
           </form>
 
-        </div>
+
       </div>
       <!------------------------------------------------------------------------------------------->
 
