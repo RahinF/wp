@@ -9,64 +9,36 @@ const ticketFCA = [25, 30];
 const ticketFCP = [23, 27.50];
 const ticketFCC = [21, 25];
 
+//----------------------------------------------------------------------------
 
 
-function inputMonday() {
-  document.getElementById('movie[day]').value = movieDay[0];
-  document.getElementById('booking-day').innerHTML = movieDay[0];
-}
-
-function inputTuesday() {
-  document.getElementById('movie[day]').value = movieDay[1];
-  document.getElementById('booking-day').innerHTML = movieDay[1];
-}
-
-function inputWednesday() {
-  document.getElementById('movie[day]').value = movieDay[2];
-  document.getElementById('booking-day').innerHTML = movieDay[2];
-}
-
-function inputThursday() {
-  document.getElementById('movie[day]').value = movieDay[3];
-  document.getElementById('booking-day').innerHTML = movieDay[3];
-}
-
-function inputFriday() {
-  document.getElementById('movie[day]').value = movieDay[4];
-  document.getElementById('booking-day').innerHTML = movieDay[4];
-}
-
-function inputSaturday() {
-  document.getElementById('movie[day]').value = movieDay[5];
-  document.getElementById('booking-day').innerHTML = movieDay[5];
-}
-
-function inputSunday() {
-  document.getElementById('movie[day]').value = movieDay[6];
-  document.getElementById('booking-day').innerHTML = movieDay[6];
+function test() {
+  var button = document.getElementById('now-showing').getElementsByTagName('button');
+  for (var i = 0; i < button.length; i++) {
+    button[i].addEventListener("click", addDayHour);
+    console.log(button);
+  }
 }
 
 
+function addDayHour(e) {
+  for (var i = 0; i < movieDay.length; i++) {
+    if (e.target.innerHTML.includes(movieDay[i])) {
+      document.getElementById('movie[day]').value = movieDay[i];
+      document.getElementById('booking-day').innerHTML = movieDay[i];
+    }
+  }
 
-function input3pm() {
-  document.getElementById('movie[hour]').value = movieHours[0];
-  document.getElementById('booking-hour').innerHTML = movieHours[0];
+  for (var i = 0; i < movieHours.length; i++) {
+    if (e.target.innerHTML.includes(movieHours[i])) {
+      document.getElementById('movie[hour]').value = movieHours[i];
+      document.getElementById('booking-hour').innerHTML = movieHours[i];
+    }
+  }
+
 }
 
-function input6pm() {
-  document.getElementById('movie[hour]').value = movieHours[1];
-  document.getElementById('booking-hour').innerHTML = movieHours[1];
-}
-
-function input9pm() {
-  document.getElementById('movie[hour]').value = movieHours[2];
-  document.getElementById('booking-hour').innerHTML = movieHours[2];
-}
-
-function input12pm() {
-  document.getElementById('movie[hour]').value = movieHours[3];
-  document.getElementById('booking-hour').innerHTML = movieHours[3];
-}
+//----------------------------------------------------------------------------
 
 
 
@@ -97,22 +69,22 @@ function openBooking(movie) {
   var bookingSection = document.getElementById('booking-section');
   console.log(bookingSection);
   if (bookingSection.style.display = "none") {
-    bookingSection.style.display = "block";
+    bookingSection.style.display = "grid";
   }
   var tabcontent = document.getElementsByClassName("movie-name");
   for (var i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  document.getElementById(movie).style.display = "block";
+  document.getElementById(movie).style.display = "grid";
 }
 
 
 function openSynopsis(movie) {
-  var tabcontent = document.getElementsByClassName("tabcontent");
-  for (var i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  var synopsisTabs = document.getElementsByClassName("synopsis - tabs");
+  for (var i = 0; i < synopsisTabs.length; i++) {
+    synopsisTabs[i].style.display = "none";
   }
-  document.getElementById(movie).style.display = "block";
+  document.getElementById(movie).style.display = "grid";
 }
 
 // changes the appearance of nav links based on the current section
@@ -153,7 +125,7 @@ function calcTotalPrice() {
     day == movieDay[3] && hour == movieHours[3] ||
     day == movieDay[4] && hour == movieHours[3]
 
-  ) ? i = 0:   i = 1;
+  ) ? i = 0 : i = 1;
 
   var p1 = ticketSTA[i] * seatsSTA;
   var p2 = ticketSTP[i] * seatsSTP;
@@ -164,5 +136,5 @@ function calcTotalPrice() {
   var tprice = p1 + p2 + p3 + p4 + p5 + p6;
 
   // write result to span
-  document.getElementById('total-price').innerHTML = "$"+tprice.toFixed(2);
+  document.getElementById('total-price').innerHTML = "$" + tprice.toFixed(2);
 }

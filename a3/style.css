@@ -395,22 +395,6 @@ footer a {
   position: relative;
 }
 
-.click {
-  position: absolute;
-  top: 10px;
-  background-color: white;
-  margin: auto;
-  list-style: none;
-  padding: 0;
-}
-
-.click li {
-  margin: auto;
-  padding: 10px;
-  display: inline-block;
-  border: 1px solid blue;
-}
-
 .grid-item>h2 {
   position: absolute;
   bottom: 10px;
@@ -440,11 +424,9 @@ button:focus {
   color: #FFF;
 }
 
-.tabcontent {
+.synopsis-tabs {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  padding: 12px 0px;
 }
 
 /*-----------------------------------------------------------------*/
@@ -522,4 +504,11 @@ button:focus {
 
 input {
   display: block;
+}
+
+.synopsis-container {
+  width: 90%;
+  margin: auto;
+  display: none;
+  grid-template-columns: auto auto;
 }

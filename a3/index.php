@@ -305,79 +305,74 @@
 
       <div class="synopsis">
 
-        <div id="synopsisSW" class="tabcontent">
+        <div id="synopsisSW" class="synopsis-tabs synopsis-container">
           <div>
             <h2>Star Wars: The Rise of Skywalker</h2>
             <h3>Rating: M</h3>
             <p>The surviving Resistance faces the First Order once more as Rey, Finn and Poe Dameron's journey continues. With the power and knowledge of generations behind them, the final battle commences.</p>
-          </div>
-          <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/14EztMXh5vQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <button type="button" name="button" onclick="input12pm();inputMonday()">Monday 12:00pm</button>
-          <button type="button" name="button" onclick="input12pm();inputTuesday()">Tuesday 12:00pm</button>
-          <button type="button" name="button" onclick="input6pm();inputWednesday()">Wednesday 6:00pm</button>
-          <button type="button" name="button" onclick="input6pm();inputThursday()">Thursday 6:00pm</button>
-          <button type="button" name="button" onclick="input6pm();inputFriday()">Friday 6:00pm</button>
-          <button type="button" name="button" onclick="input12pm();inputSaturday()">Saturday 12:00pm</button>
-          <button type="button" name="button" onclick="input12pm();inputSunday()">Sunday 12:00pm</button>
+          <button type="button" name="button">Monday 12pm</button>
+          <button type="button" name="button">Tuesday 12pm</button>
+          <button type="button" name="button">Wednesday 6pm</button>
+          <button type="button" name="button">Thursday 6pm</button>
+          <button type="button" name="button">Friday 6pm</button>
+          <button type="button" name="button">Saturday 12pm</button>
+          <button type="button" name="button">Sunday 12pm</button>
         </div>
+        <div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/14EztMXh5vQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
 
-        <div id="synopsisF2" class="tabcontent">
+        <div id="synopsisF2" class="synopsis-tabs synopsis-container">
           <div>
             <h2>Frozen 2</h2>
             <h3>Rating: PG</h3>
             <p>Elsa the Snow Queen has an extraordinary gift -- the power to create ice and snow. But no matter how happy she is to be surrounded by the people of Arendelle, Elsa finds herself strangely unsettled. After hearing a mysterious voice
               call out to her, Elsa travels to the enchanted forests and dark seas beyond her kingdom -- an adventure that soon turns into a journey of self-discovery.</p>
+              <button type="button" name="button">Wednesday 9pm</button>
+              <button type="button" name="button">Thursday 9pm</button>
+              <button type="button" name="button">Friday 9pm</button>
+              <button type="button" name="button">Saturday 6pm</button>
+              <button type="button" name="button">Sunday 6pm</button>
           </div>
           <div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Zi4LMpSDccc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <button type="button" name="button" onclick="input9pm();inputWednesday()">Wednesday 9:00pm</button>
-          <button type="button" name="button" onclick="input9pm();inputThursday()">Thursday 9:00pm</button>
-          <button type="button" name="button" onclick="input9pm();inputFriday()">Friday 9:00pm</button>
-          <button type="button" name="button" onclick="input6pm();inputSaturday()">Saturday 6:00pm</button>
-          <button type="button" name="button" onclick="input6pm();inputSunday()">Sunday 6:00pm</button>
         </div>
 
-        <div id="synopsisTA" class="tabcontent">
+        <div id="synopsisTA" class="synopsis-tabs synopsis-container">
           <div>
-            <h2>The Aeronauts</h2>
+            <h1>The Aeronauts</h1>
             <h3>Rating: PG</h3>
             <p>In 1862 headstrong scientist James Glaisher and wealthy young widow Amelia Wren mount a balloon expedition to fly higher than anyone in history. As their perilous ascent reduces their chances of survival, the unlikely duo soon discover
               things about themselves -- and each other -- that help both of them find their place in the world.</p>
+              <button type="button" name="button">Monday 6pm</button>
+              <button type="button" name="button">Tuesday 6pm</button>
+              <button type="button" name="button">Saturday 3pm</button>
+              <button type="button" name="button">Sunday 3pm</button>
           </div>
           <div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/Rm4VnwCtQO8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <button type="button" name="button" onclick="input6pm();inputMonday()">
-            <div>Monday<div><span>6:00pm</span>
-          </button>
-          <button type="button" name="button" onclick="input6pm();inputTuesday()">Tuesday 6:00pm</button>
-          <button type="button" name="button" onclick="input3pm();inputSaturday()">Saturday 3:00pm</button>
-          <button type="button" name="button" onclick="input3pm();inputSunday()">Sunday 3:00pm</button>
         </div>
 
-        <div id="synopsisJR" class="tabcontent">
+        <div id="synopsisJR" class="synopsis-tabs synopsis-container">
           <div>
-            <h2>JoJo Rabbit</h2>
+            <h1>JoJo Rabbit</h1>
             <h3>Rating: PG</h3>
             <p>Jojo is a lonely German boy who discovers that his single mother is hiding a Jewish girl in their attic. Aided only by his imaginary friend -- Adolf Hitler -- Jojo must confront his blind nationalism as World War II continues to rage
               on.</p>
+              <button type="button" name="button">Wednesday 12pm</button>
+              <button type="button" name="button">Thursday 12pm</button>
+              <button type="button" name="button">Friday 12pm</button>
+              <button type="button" name="button">Saturday 9pm</button>
+              <button type="button" name="button">Sunday 9pm</button>
           </div>
           <div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/tL4McUzXfFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-
-            <button type="button" name="button" onclick="input12pm();inputWednesday()">Wednesday 12:00pm</button>
-            <button type="button" name="button" onclick="input12pm();inputThursday()">Thursday 12:00pm</button>
-            <button type="button" name="button" onclick="input12pm();inputFriday()">Friday 12:00pm</button>
-            <button type="button" name="button" onclick="input9pm();inputSaturday()">Saturday 9:00pm</button>
-            <button type="button" name="button" onclick="input9pm();inputSunday()">Sunday 9:00pm</button>
-
-
         </div>
-      </div>
+</div>
 
 
       <div id="booking-section">
@@ -488,18 +483,18 @@
             <fieldset >
               <legend>Customer</legend>
               <input id="movie[id]" type="hidden" name="movie[id]">
-              <input id="movie[day]" type="hidden" name="movie[day]">
-              <input id="movie[hour]" type="hidden" name="movie[hour]">
-              <label for="cust[name]">Name: </label><input id="cust[name]" type="text" name="cust[name]" pattern="^[a-zA-Z \-.']+$">
-              <label for="cust[email]">Email: </label><input id="cust[email]" type="email" name="cust[email]">
-              <label for="cust[mobile]">Mobile: </label><input id="cust[mobile]" type="tel" name="cust[mobile]" pattern="^(\(04\)|04|\+614)( ?\d){8}$">
-              <label for="cust[card]">Credit Card: </label><input id="cust[card]" type="text" name="cust[card]">
-              Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" pattern="^[0-9]{4}\-[0-9]{2}$">
+              <input id="movie[day]" type="text" name="movie[day]">
+              <input id="movie[hour]" type="text" name="movie[hour]">
+              <label for="cust[name]">Name: </label><input id="cust[name]" type="text" name="cust[name]" pattern="^[a-zA-Z \-.']+$" required>
+              <label for="cust[email]">Email: </label><input id="cust[email]" type="email" name="cust[email]" required>
+              <label for="cust[mobile]">Mobile: </label><input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" pattern="^(\(04\)|04|\+614)( ?\d){8}$" required>
+              <label for="cust[card]">Credit Card: </label><input id="cust[card]" type="text" name="cust[card]" pattern="^( ?\d){14,19}$" required>
+              Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" pattern="^[0-9]{4}\-[0-9]{2}$" required>
             </fieldset>
 
             <div class="grid-item">
 
-              Total: <span id="total-price"></span>
+              Total: <span id="total-price">$0.00</span>
             </div>
             <input type="submit" value="Order">
             </div>
@@ -509,7 +504,7 @@
       </div>
       <!------------------------------------------------------------------------------------------->
 
-
+      <button type="button" id="test"name="button" onclick="test()">Thursday</button>
 
     </section>
 
