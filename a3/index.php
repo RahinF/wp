@@ -120,14 +120,14 @@
         <div class="price-box">
           <h2>Adult</h2>
           <ul>
-            <li>Monday: <span class='ticket-price'> $15 </span></li>
-            <li>Tuesday: <span class='ticket-price'> $15</span></li>
-            <li>Wednesday: <span class='ticket-price'>12pm $15</span>
-              <span class='ticket-price'>after 12pm $20.50</span></li>
-            <li>Thursday: <span class='ticket-price'>12pm $15</span>
-              <span class='ticket-price'>after 12pm $20.50</span></li>
-            <li>Friday: <span class='ticket-price'>12pm $15</span>
-              <span class='ticket-price'>after 12pm $20.50</span></li>
+            <li>Monday: <span class='ticket-price'>$15 </span></li>
+            <li>Tuesday: <span class='ticket-price'>$15</span></li>
+            <li>Wednesday:
+              <span class='ticket-price'>$20.50</span><span class='ticket-price'>12pm $15</span></li>
+            <li>Thursday:
+              <span class='ticket-price'>$20.50</span> <span class='ticket-price'>12pm $15</span></li>
+            <li>Friday:
+              <span class='ticket-price'>$20.50</span><span class='ticket-price'>12pm $15</span></li>
             <li>Saturday: <span class='ticket-price'> $20.50</span></li>
             <li>Sunday: <span class='ticket-price'>$20.50</span></li>
           </ul>
@@ -138,12 +138,12 @@
           <ul>
             <li>Monday: <span class='ticket-price'>$13</span></li>
             <li>Tuesday: <span class='ticket-price'>$13</span></li>
-            <li>Wednesday: <span class='ticket-price'>12pm $13</span>
-              <span class='ticket-price'>after 12pm $18</span></li>
-            <li>Thursday: <span class='ticket-price'>12pm $13</span>
-              <span class='ticket-price'>after 12pm $18</span></li>
-            <li>Friday: <span class='ticket-price'>12pm $13</span>
-              <span class='ticket-price'>after 12pm $18</span></li>
+            <li>Wednesday:
+              <span class='ticket-price'>$18</span> <span class='ticket-price'>12pm $13</span></li>
+            <li>Thursday:
+              <span class='ticket-price'>$18</span><span class='ticket-price'>12pm $13</span></li>
+            <li>Friday:
+              <span class='ticket-price'>$18</span><span class='ticket-price'>12pm $13</span></li>
             <li>Saturday: <span class='ticket-price'>$18</span></li>
             <li>Sunday: <span class='ticket-price'>$18</span></li>
           </ul>
@@ -154,12 +154,12 @@
           <ul>
             <li>Monday: <span class='ticket-price'>$11</span></li>
             <li>Tuesday: <span class='ticket-price'>$11</span></li>
-            <li>Wednesday: <span class='ticket-price'>12pm $11</span>
-              <span class='ticket-price'>after 12pm $15.50</span></li>
-            <li>Thursday: <span class='ticket-price'>12pm $11</span>
-              <span class='ticket-price'>after 12pm $15.50</span></li>
-            <li>Friday: <span class='ticket-price'>12pm $11</span>
-              <span class='ticket-price'>after 12pm $15.50</span></li>
+            <li>Wednesday:
+              <span class='ticket-price'>$15.50</span><span class='ticket-price'>12pm $11</span></li>
+            <li>Thursday:
+              <span class='ticket-price'>$15.50</span><span class='ticket-price'>12pm $11</span></li>
+            <li>Friday:
+              <span class='ticket-price'>$15.50</span><span class='ticket-price'>12pm $11</span></li>
             <li>Saturday: <span class='ticket-price'>$15.50</span></li>
             <li>Sunday: <span class='ticket-price'>$15.50</span></li>
           </ul>
@@ -175,12 +175,12 @@
           <ul>
             <li>Monday: <span class='ticket-price'>$25</span></li>
             <li>Tuesday: <span class='ticket-price'>$25</span></li>
-            <li>Wednesday: <span class='ticket-price'>12pm $25</span>
-              <span class='ticket-price'>after 12pm $30</span></li>
-            <li>Thursday: <span class='ticket-price'>12pm $25</span>
-              <span class='ticket-price'>after 12pm $30</span></li>
-            <li>Friday: <span class='ticket-price'>12pm $25</span>
-              <span class='ticket-price'>after 12pm $30</span></li>
+            <li>Wednesday:
+              <span class='ticket-price'>$30</span> <span class='ticket-price'>12pm $25</span></li>
+            <li>Thursday:
+              <span class='ticket-price'>$30</span><span class='ticket-price'>12pm $25</span></li>
+            <li>Friday:
+              <span class='ticket-price'>$30</span><span class='ticket-price'>12pm $25</span></li>
             <li>Saturday: <span class='ticket-price'> $30</span></li>
             <li>Sunday: <span class='ticket-price'> $30</span></li>
           </ul>
@@ -191,12 +191,12 @@
           <ul>
             <li>Monday: <span class='ticket-price'>$23</span></li>
             <li>Tuesday: <span class='ticket-price'>$23</span></li>
-            <li>Wednesday: <span class='ticket-price'>12pm $23</span>
-              <span class='ticket-price'>after 12pm $27.50</span></li>
-            <li>Thursday: <span class='ticket-price'>12pm $23</span>
-              <span class='ticket-price'>after 12pm $27.50</span></li>
-            <li>Friday: <span class='ticket-price'>12pm $23</span>
-              <span class='ticket-price'>after 12pm $27.50</span></li>
+            <li>Wednesday:
+              <span class='ticket-price'>$27.50</span><span class='ticket-price'>12pm $23</span></li>
+            <li>Thursday:
+              <span class='ticket-price'>$27.50</span><span class='ticket-price'>12pm $23</span></li>
+            <li>Friday:
+              <span class='ticket-price'>$27.50</span><span class='ticket-price'>12pm $23</span></li>
             <li>Saturday: <span class='ticket-price'> $27.50</span></li>
             <li>Sunday: <span class='ticket-price'> $27.50</span></li>
           </ul>
@@ -207,12 +207,12 @@
           <ul>
             <li>Monday: <span class='ticket-price'>$21</span></li>
             <li>Tuesday: <span class='ticket-price'>$21</span></li>
-            <li>Wednesday: <span class='ticket-price'>12pm $21</span>
-              <span class='ticket-price'>after 12pm $25</span></li>
-            <li>Thursday: <span class='ticket-price'>12pm $21</span>
-              <span class='ticket-price'>after 12pm $25</span></li>
-            <li>Friday: <span class='ticket-price'>12pm $21</span>
-              <span class='ticket-price'>after 12pm $25</span></li>
+            <li>Wednesday:
+              <span class='ticket-price'>$25</span><span class='ticket-price'>12pm $21</span></li>
+            <li>Thursday:
+              <span class='ticket-price'>$25</span><span class='ticket-price'>12pm $21</span></li>
+            <li>Friday:
+              <span class='ticket-price'>$25</span><span class='ticket-price'>12pm $21</span></li>
             <li>Saturday: <span class='ticket-price'> $25</span></li>
             <li>Sunday: <span class='ticket-price'> $25</span></li>
           </ul>
@@ -231,7 +231,7 @@
         <div class="movie-box" id="moviePanelACT" onclick="inputGenreACT(); openSynopsis('synopsisSW');openBooking('bookingSW')">
           <img src="../../media/sw.jpg" alt="Star Wars: The Rise of Skywalker movie poster">
           <h1>Star Wars: The Rise of Skywalker</h1>
-          <h5>Rating: M</h5>
+          <div class="movie-rating"><img src="../../media/M-rating.png" alt="M-Rating"></div>
           <div class="overlay">
             <div class="movie-text">
               <ul class="ml">
@@ -248,9 +248,9 @@
         </div>
 
         <div class="movie-box" id="moviePanelANM" onclick="inputGenreANM(); openSynopsis('synopsisF2'); openBooking('bookingF2')">
-          <img src="../../media/f2.jpg" alt="Frozen 2 movie poster">
+          <img src="../../media/f2.png" alt="Frozen 2 movie poster">
           <h1>Frozen 2</h1>
-          <h5>Rating: PG</h5>
+          <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
           <div class="overlay">
             <div class="movie-text">
               <ul class="ml">
@@ -268,7 +268,7 @@
         <div class="movie-box" id="moviePanelRMC" onclick="inputGenreRMC(); openSynopsis('synopsisTA');openBooking('bookingTA')">
           <img src="../../media/aeronauts-poster.jpg" alt="The Aeronauts movie poster">
           <h1>The Aeronauts</h1>
-          <h5>Rating: PG</h5>
+          <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
           <div class="overlay">
             <div class="movie-text">
               <ul class="ml">
@@ -284,7 +284,7 @@
         <div class="movie-box" id="moviePanelAHF" onclick="inputGenreAHF(); openSynopsis('synopsisJR');openBooking('bookingJR')">
           <img src="../../media/jojo-rabbit-poster.jpg" alt="JoJo Rabbit movie poster">
           <h1>JoJo Rabbit</h1>
-          <h5>Rating: PG</h5>
+          <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
           <div class="overlay">
             <div class="movie-text">
               <ul class="ml">
@@ -376,7 +376,7 @@
 
 
       <div id="booking-section">
-        <div>
+        <span class = "booking-movie-details">
           <h1 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker</h1>
           <h1 id="bookingF2" class="movie-name">Frozen 2</h1>
           <h1 id="bookingTA" class="movie-name">The Aeronauts</h1>
@@ -386,15 +386,10 @@
         <span id="booking-hour"></span>
 
 
-      </div>
+      </span>
 
           <form  class="grid-box" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
-
-
-          <div class="grid-item">
-
-
-            <fieldset>
+            <fieldset class="grid-item">
               <legend>Standard</legend>
               Adults
               <select id="seats[STA]" name="seats[STA]" onchange="calcTotalPrice()">
@@ -437,7 +432,7 @@
               </select>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="grid-item">
               <legend>First Class</legend>
               Adults
               <select id="seats[FCA]" name="seats[FCA]" onchange="calcTotalPrice()">
@@ -479,12 +474,13 @@
                 <option value="9">9</option>
               </select>
             </fieldset>
-</div><div class="grid-item">
-            <fieldset >
+
+
+            <fieldset  class="grid-item">
               <legend>Customer</legend>
               <input id="movie[id]" type="hidden" name="movie[id]">
-              <input id="movie[day]" type="text" name="movie[day]">
-              <input id="movie[hour]" type="text" name="movie[hour]">
+              <input id="movie[day]" type="hidden" name="movie[day]">
+              <input id="movie[hour]" type="hidden" name="movie[hour]">
               <label for="cust[name]">Name: </label><input id="cust[name]" type="text" name="cust[name]" pattern="^[a-zA-Z \-.']+$" required>
               <label for="cust[email]">Email: </label><input id="cust[email]" type="email" name="cust[email]" required>
               <label for="cust[mobile]">Mobile: </label><input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" pattern="^(\(04\)|04|\+614)( ?\d){8}$" required>
@@ -493,10 +489,8 @@
             </fieldset>
 
             <div class="grid-item">
-
               Total: <span id="total-price">$0.00</span>
-            </div>
-            <input type="submit" value="Order">
+              <input type="submit" value="Order">
             </div>
           </form>
 
@@ -504,7 +498,6 @@
       </div>
       <!------------------------------------------------------------------------------------------->
 
-      <button type="button" id="test"name="button" onclick="test()">Thursday</button>
 
     </section>
 

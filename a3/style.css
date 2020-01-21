@@ -86,6 +86,7 @@ nav a:hover {
   color: #565656;
   font-size: 18px;
   font-family: 'Tajawal', sans-serif;
+  min-width: 400px;
 }
 
 #prices {
@@ -207,6 +208,10 @@ nav a:hover {
   border-radius: 8px 8px 18px 18px;
 }
 
+.chair-box {
+  text-align: center;
+}
+
 /* DOLBY SYSTEMS */
 .dolby-systems {
   padding: 3% 0%;
@@ -247,17 +252,14 @@ nav a:hover {
 /* NOW SHOWING SECTION */
 #now-showing {
   background: url('../../media/5-dots.png');
+  padding: 5% 0;
 }
 
 #now-showing>h1 {
   margin: 0;
-  padding: 4%;
+  padding-bottom: 4%;
   color: #FFF;
   text-transform: uppercase;
-}
-
-#now-showing img {
-  height: 300px;
 }
 
 .synopsis {
@@ -285,19 +287,19 @@ nav a:hover {
 
 footer {
   padding: 20px 2%;
-  background: url('../../media/5-dots.png');
-  color: #FFF;
+  background: url('../../media/dust_scratches.png');
 }
 
 footer a {
   color: #FF3B3F;
 }
 
-@media (min-width: 800px) and (max-width: 1500px) {
+@media (min-width: 900px) and (max-width: 1500px) {
   .dolby-systems div {
     display: block;
     width: 90%;
     margin: auto;
+    text-align: center;
   }
 
   .dolby-1 img, .dolby-2 img {
@@ -306,7 +308,7 @@ footer a {
   }
 
   .price-box {
-    width: 33%;
+    width: 32%;
   }
 
   .price-box ul li span {
@@ -318,10 +320,29 @@ footer a {
     padding: 10px 0px;
     width: 100%;
   }
+
+  .now-showing-grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .flex-container-price {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .grid-box {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
 }
 
 /* WHEN THE SCREEN IS BIGGER THAN THIS NUMBER*/
-@media(min-width: 800px) {
+@media(min-width: 1500px) {
   .flex-container {
     display: flex;
     width: 90%;
@@ -330,11 +351,6 @@ footer a {
 
   .chair-box {
     width: 50%;
-  }
-
-  .now-showing-grid {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
   }
 
   .flex-container-price {
@@ -379,18 +395,30 @@ footer a {
   .price-box h2 {
     border-radius: 8px 8px 0px 0px;
   }
+
+  .now-showing-grid {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .grid-box {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .synopsis-container {
+    width: 90%;
+    grid-template-columns: auto auto;
+  }
 }
 
 /* ---------------------------------------------------------------------------- */
 .grid-box {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto auto;
   background: url('../../media/dust_scratches.png');
 }
 
 .grid-item {
-  border: 1px solid blue;
   padding: 10px;
   position: relative;
 }
@@ -413,20 +441,29 @@ input[pattern]:invalid {
 button {
   font-size: 18px;
   font-family: 'Tajawal', sans-serif;
-  border-radius: 18px;
-  padding: 10px;
   border-style: none;
+  padding: 4px 20px;
+  margin: 2% 0;
+
+  background-color: #FF3B3F;
+  color: #FFF;
+
+  border-radius: 18px;
 }
 
 button:focus {
   outline: 0;
-  background: #FF3B3F;
-  color: #FFF;
+}
+
+button:active{
+
+  background-color  : #b2292c;
+
 }
 
 .synopsis-tabs {
   display: none;
-  padding: 12px 0px;
+  padding: 5% 0;
 }
 
 /*-----------------------------------------------------------------*/
@@ -462,14 +499,8 @@ button:focus {
   margin: auto;
   width: 100%;
   text-transform: uppercase;
-}
-
-.movie-box h5 {
-  color: white;
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  padding: 0% 3%;
+  font-size: 18px;
+  text-align: center;
 }
 
 .movie-text {
@@ -507,8 +538,47 @@ input {
 }
 
 .synopsis-container {
-  width: 90%;
+  padding: 3%;
   margin: auto;
   display: none;
-  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.synopsis-container>div>p {
+  padding-right: 10px;
+}
+
+.movie-box>img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+}
+
+fieldset {
+  font-size: 18px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+fieldset>input {
+  border: 1px solid #FF3B3F;
+  border-radius: 18px;
+}
+
+.now-showing-grid {
+  display: grid;
+}
+
+.movie-rating>img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.booking-movie-details {
+  background: url("../../media/dust_scratches.png");
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Tajawal', sans-serif;
 }

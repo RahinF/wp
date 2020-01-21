@@ -12,7 +12,7 @@ const ticketFCC = [21, 25];
 //----------------------------------------------------------------------------
 
 
-function test() {
+window.onload = function test() {
   var button = document.getElementById('now-showing').getElementsByTagName('button');
   for (var i = 0; i < button.length; i++) {
     button[i].addEventListener("click", addDayHour);
@@ -34,6 +34,12 @@ function addDayHour(e) {
       document.getElementById('movie[hour]').value = movieHours[i];
       document.getElementById('booking-hour').innerHTML = movieHours[i];
     }
+  }
+
+
+  var bookingSection = document.getElementById('booking-section');
+  if (bookingSection.style.display = "none") {
+    bookingSection.style.display = "grid";
   }
 
 }
@@ -66,21 +72,16 @@ function openBooking(movie) {
   document.getElementById('booking-day').innerHTML = "";
   document.getElementById('booking-hour').innerHTML = "";
 
-  var bookingSection = document.getElementById('booking-section');
-  console.log(bookingSection);
-  if (bookingSection.style.display = "none") {
-    bookingSection.style.display = "grid";
-  }
   var tabcontent = document.getElementsByClassName("movie-name");
   for (var i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  document.getElementById(movie).style.display = "grid";
+  document.getElementById(movie).style.display = "inline";
 }
 
 
 function openSynopsis(movie) {
-  var synopsisTabs = document.getElementsByClassName("synopsis - tabs");
+  var synopsisTabs = document.getElementsByClassName("synopsis-tabs");
   for (var i = 0; i < synopsisTabs.length; i++) {
     synopsisTabs[i].style.display = "none";
   }
@@ -96,7 +97,7 @@ window.onscroll = function() {
 
   for (var i = 0; i < section.length; i++) {
     var sectionTop = section[i].offsetTop;
-    var sectionBottom = section[i].offsetTop + section[i].offsetHeight;
+    var sectionBottom = section[i].offsetTop + (section[i].offsetHeight);
     if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
 
       navlinks[i].classList.add('current');
