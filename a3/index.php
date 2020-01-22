@@ -10,7 +10,7 @@
   <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
   <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
   <script src='../wireframe.js'></script>
-  <script src="script.js"></script>
+
 
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css?family=Courgette|Montserrat|Tajawal&display=swap" rel="stylesheet">
@@ -228,7 +228,7 @@
 
       <div class="now-showing-grid">
 
-        <div class="movie-box" id="moviePanelACT" onclick="inputGenreACT(); openSynopsis('synopsisSW');openBooking('bookingSW')">
+        <div class="movie-box" id="moviePanelACT" onclick=" openSynopsis('synopsisSW');openBooking('bookingSW')">
           <img src="../../media/sw.jpg" alt="Star Wars: The Rise of Skywalker movie poster">
           <h1>Star Wars: The Rise of Skywalker</h1>
           <div class="movie-rating"><img src="../../media/M-rating.png" alt="M-Rating"></div>
@@ -247,7 +247,7 @@
           </div>
         </div>
 
-        <div class="movie-box" id="moviePanelANM" onclick="inputGenreANM(); openSynopsis('synopsisF2'); openBooking('bookingF2')">
+        <div class="movie-box" id="moviePanelANM" onclick="openSynopsis('synopsisF2'); openBooking('bookingF2')">
           <img src="../../media/f2.png" alt="Frozen 2 movie poster">
           <h1>Frozen 2</h1>
           <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
@@ -265,7 +265,7 @@
         </div>
 
 
-        <div class="movie-box" id="moviePanelRMC" onclick="inputGenreRMC(); openSynopsis('synopsisTA');openBooking('bookingTA')">
+        <div class="movie-box" id="moviePanelRMC" onclick="openSynopsis('synopsisTA');openBooking('bookingTA')">
           <img src="../../media/aeronauts-poster.jpg" alt="The Aeronauts movie poster">
           <h1>The Aeronauts</h1>
           <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
@@ -281,7 +281,7 @@
             </div>
           </div>
 
-        <div class="movie-box" id="moviePanelAHF" onclick="inputGenreAHF(); openSynopsis('synopsisJR');openBooking('bookingJR')">
+        <div class="movie-box" id="moviePanelAHF" onclick="openSynopsis('synopsisJR');openBooking('bookingJR')">
           <img src="../../media/jojo-rabbit-poster.jpg" alt="JoJo Rabbit movie poster">
           <h1>JoJo Rabbit</h1>
           <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
@@ -376,7 +376,7 @@
 
 
       <div id="booking-section">
-        <span class = "booking-movie-details">
+        <div class = "booking-movie-details">
           <h1 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker</h1>
           <h1 id="bookingF2" class="movie-name">Frozen 2</h1>
           <h1 id="bookingTA" class="movie-name">The Aeronauts</h1>
@@ -386,13 +386,13 @@
         <span id="booking-hour"></span>
 
 
-      </span>
+      </div>
 
           <form  class="grid-box" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
             <fieldset class="grid-item">
               <legend>Standard</legend>
               Adults
-              <select id="seats[STA]" name="seats[STA]" onchange="calcTotalPrice()">
+              <select id="seats[STA]" name="seats[STA]" onchange="calcTotalPrice2()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -405,7 +405,7 @@
                 <option value="9">9</option>
               </select>
               Consession
-              <select id="seats[STP]" name="seats[STP]" onchange="calcTotalPrice()">
+              <select id="seats[STP]" name="seats[STP]" onchange="calcTotalPrice2()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -418,7 +418,7 @@
                 <option value="9">9</option>
               </select>
               Children
-              <select id="seats[STC]" name="seats[STC]" onchange="calcTotalPrice()">
+              <select id="seats[STC]" name="seats[STC]" onchange="calcTotalPrice2()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -435,7 +435,7 @@
             <fieldset class="grid-item">
               <legend>First Class</legend>
               Adults
-              <select id="seats[FCA]" name="seats[FCA]" onchange="calcTotalPrice()">
+              <select id="seats[FCA]" name="seats[FCA]" onchange="calcTotalPrice2()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -448,7 +448,7 @@
                 <option value="9">9</option>
               </select>
               Consession
-              <select id="seats[FCP]" name="seats[FCP]" onchange="calcTotalPrice()">
+              <select id="seats[FCP]" name="seats[FCP]" onchange="calcTotalPrice2()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -461,7 +461,7 @@
                 <option value="9">9</option>
               </select>
               Children
-              <select id="seats[FCC]" name="seats[FCC]" onchange="calcTotalPrice()">
+              <select id="seats[FCC]" name="seats[FCC]" onchange="calcTotalPrice2()">
                 <option value="0">Please Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -515,6 +515,7 @@
       </script> Rahin Farook, s3297352. <a href="https://github.com/RahinF/wp">Github</a> Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
+    <script src="script.js"></script>
   </footer>
 
 </body>

@@ -133,7 +133,7 @@ nav a:hover {
   float: right;
 }
 
-#about-us, #prices, #now-showing {
+#about-us, #prices {
   min-height: 100vh;
   text-align: justify;
 }
@@ -252,7 +252,6 @@ nav a:hover {
 /* NOW SHOWING SECTION */
 #now-showing {
   background: url('../../media/5-dots.png');
-  padding: 5% 0;
 }
 
 #now-showing>h1 {
@@ -264,10 +263,6 @@ nav a:hover {
 
 .synopsis {
   background: url('../../media/dust_scratches.png');
-}
-
-.synopsis iframe {
-  width: 90%;
 }
 
 .synopsis ul {
@@ -409,6 +404,7 @@ footer a {
     width: 90%;
     grid-template-columns: auto auto;
   }
+
 }
 
 /* ---------------------------------------------------------------------------- */
@@ -507,7 +503,7 @@ button:active{
   width: inherit;
   background-color: hsla(360, 100%, 0%, 0.75);
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   position: absolute;
   bottom: 20%;
   text-align: center;
@@ -539,7 +535,9 @@ input {
 
 .synopsis-container {
   padding: 3%;
-  margin: auto;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
   display: none;
   grid-template-rows: auto auto;
 }
@@ -581,4 +579,8 @@ fieldset>input {
   text-align: center;
   font-size: 18px;
   font-family: 'Tajawal', sans-serif;
+}
+
+#now-showing {
+  padding: 1%;
 }
