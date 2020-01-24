@@ -69,8 +69,7 @@ nav li a {
 }
 
 nav a.current {
-  font-weight: bold;
-  color: #FF3B3F;
+  border-bottom: 4px solid #FF3B3F;
   transition: 0.3s;
 }
 
@@ -329,6 +328,26 @@ footer a {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
   }
+
+  .booking-grid>:first-child {
+    order: 1;
+  }
+
+  .booking-grid>:nth-child(2) {
+    order: 3;
+  }
+
+  .booking-grid>:nth-child(3) {
+    order: 2;
+  }
+
+  .booking-grid>:nth-child(4) {
+    order: 4;
+  }
+
+  .booking-grid>:nth-child(2)>fieldset {
+    width: 700px;
+  }
 }
 
 /* WHEN THE SCREEN IS BIGGER THAN THIS NUMBER*/
@@ -399,13 +418,24 @@ footer a {
     min-width: 500px;
   }
 
-  .booking-grid>:first-child{order:1;
+  .booking-grid>:first-child {
+    order: 1;
   }
-  .booking-grid>:nth-child(2){order:3;
+
+  .booking-grid>:nth-child(2) {
+    order: 3;
   }
-  .booking-grid>:nth-child(3){order:2;
+
+  .booking-grid>:nth-child(3) {
+    order: 2;
   }
-  .booking-grid>:nth-child(4){order:4;
+
+  .booking-grid>:nth-child(4) {
+    order: 4;
+  }
+
+  .booking-grid>:nth-child(2)>fieldset {
+    width: 700px;
   }
 }
 
@@ -421,19 +451,13 @@ footer a {
 .grid-item {
   padding: 10px;
   position: relative;
-}
-
-.grid-item>h2 {
-  position: absolute;
-  bottom: 10px;
-  left: 30px;
-  color: white;
+  max-width: 500px;
+  min-width: 300px;
 }
 
 select {
   display: block;
 }
-
 
 button, input[type=submit] {
   font-size: 18px;
@@ -524,9 +548,9 @@ button:active {
 
 #booking-section {
   display: none;
-    background: url("../../media/dust_scratches.png");
+  background: url("../../media/dust_scratches.png");
+  padding-bottom: 3%;
 }
-
 
 .synopsis-container {
   padding: 3%;
@@ -547,25 +571,22 @@ button:active {
   height: 300px;
 }
 
-select
-{
+select {
   display: inline-block;
+  padding: 4px 20px;
+  font-size: 18px;
+  border: 1px solid #565656;
+  border-radius: 4px;
+  font-family: 'Tajawal', sans-serif;
+}
 
-padding: 4px 20px;
-font-size: 18px;
-border:0;
-
-border-radius: 4px;
-font-family: 'Tajawal', sans-serif;}
-
-fieldset>input {
+fieldset>div>input {
   font-size: 18px;
   font-family: 'Tajawal', sans-serif;
   margin: auto;
   padding: 6px 10px;
   border-radius: 4px;
-  border:0;
-
+  border: 1px solid #565656;
 }
 
 .now-showing-grid {
@@ -584,6 +605,7 @@ fieldset>input {
   text-align: center;
   font-size: 18px;
   font-family: 'Tajawal', sans-serif;
+  padding: 5% 0;
 }
 
 .synopsis iframe {
@@ -594,5 +616,27 @@ fieldset>input {
   display: inline;
 }
 
-.booking-grid>:nth-child(3)>input{display: block;
+.booking-grid>:nth-child(3)>input {
+  display: block;
+}
+
+.grid-item>div {
+  padding: 20px;
+}
+
+.grid-item>div>select, .grid-item>div>input {
+  position: absolute;
+  right: 4%;
+}
+
+.booking-form {
+  margin: auto;
+  border: 2px groove black;
+  padding: 10px;
+}
+
+.grid-item input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 10%;
 }

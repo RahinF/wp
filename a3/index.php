@@ -165,7 +165,7 @@
           </ul>
         </div>
 
-      </div> <!-- End of flex-container -->
+      </div>
 
       <h1>First Class tickets</h1>
       <div class="flex-container-price">
@@ -426,127 +426,144 @@
 
 
       <div id="booking-section">
-        <div>
-        <div class="booking-movie-details">
-          <h2 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker </h2>
-          <h2 id="bookingF2" class="movie-name">Frozen 2 </h2>
-          <h2 id="bookingTA" class="movie-name">The Aeronauts </h2>
-          <h2 id="bookingJR" class="movie-name">JoJo Rabbit </h2>
+        <div class="booking-form">
+          <div class="booking-movie-details">
+            <h2 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker </h2>
+            <h2 id="bookingF2" class="movie-name">Frozen 2 </h2>
+            <h2 id="bookingTA" class="movie-name">The Aeronauts </h2>
+            <h2 id="bookingJR" class="movie-name">JoJo Rabbit </h2>
 
-          <h3 id="booking-day"></h3>
-          <h3 id="booking-hour"></h3>
+            <h3 id="booking-day"></h3>
+            <h3 id="booking-hour"></h3>
 
+
+          </div>
+
+          <form class="booking-grid" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
+            <div>
+              <fieldset class="grid-item">
+                <legend>Standard</legend>
+                <div>
+                  Adults
+                  <select id="seats[STA]" name="seats[STA]" onchange="calcTotalPrice()">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </div>
+                <div>
+                  Consession
+                  <select id="seats[STP]" name="seats[STP]" onchange="calcTotalPrice()">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </div>
+                <div>
+                  Children
+                  <select id="seats[STC]" name="seats[STC]" onchange="calcTotalPrice()">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </div>
+              </fieldset>
+
+              <fieldset class="grid-item">
+                <legend>First Class</legend>
+                <div>
+                  Adults
+                  <select id="seats[FCA]" name="seats[FCA]" onchange="calcTotalPrice()">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </div>
+                <div>
+                  Consession
+                  <select id="seats[FCP]" name="seats[FCP]" onchange="calcTotalPrice()">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </div>
+                <div>
+                  Children
+                  <select id="seats[FCC]" name="seats[FCC]" onchange="calcTotalPrice()">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                  </select>
+                </div>
+              </fieldset>
+            </div>
+            <div>
+              <fieldset class="grid-item">
+                <legend>Customer</legend>
+                <input id="movie[id]" type="hidden" name="movie[id]">
+                <input id="movie[day]" type="hidden" name="movie[day]">
+                <input id="movie[hour]" type="hidden" name="movie[hour]">
+                <div><label for="cust[name]">Name</label><input id="cust[name]" type="text" name="cust[name]" placeholder="John Smith" pattern="^[a-zA-Z \-.']+$" required></div>
+                <div><label for="cust[email]">Email</label><input id="cust[email]" type="email" name="cust[email]" placeholder="example@mail.com" required></div>
+                <div><label for="cust[mobile]">Mobile</label><input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" pattern="^(\(04\)|04|\+614)( ?\d){8}$" required></div>
+                <div><label for="cust[card]">Credit Card</label><input id="cust[card]" type="text" name="cust[card]" placeholder="0123 4567 8901 2345" pattern="^( ?\d){14,19}$" required></div>
+                <div>Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" pattern="^[0-9]{4}\-[0-9]{2}$" required></div>
+              </fieldset>
+
+
+
+              <div class="grid-item">
+                Total: <span id="total-price">$0.00</span>
+                <input type="submit" value="Order">
+              </div>
+            </div>
+          </form>
 
         </div>
-
-        <form class="booking-grid" target="_blank" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="post">
-          <fieldset class="grid-item">
-            <legend>Standard</legend>
-            Adults
-            <select id="seats[STA]" name="seats[STA]" onchange="calcTotalPrice()">
-              <option value="0">Please Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-            Consession
-            <select id="seats[STP]" name="seats[STP]" onchange="calcTotalPrice()">
-              <option value="0">Please Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-            Children
-            <select id="seats[STC]" name="seats[STC]" onchange="calcTotalPrice()">
-              <option value="0">Please Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-          </fieldset>
-
-          <fieldset class="grid-item">
-            <legend>First Class</legend>
-            Adults
-            <select id="seats[FCA]" name="seats[FCA]" onchange="calcTotalPrice()">
-              <option value="0">Please Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-            Consession
-            <select id="seats[FCP]" name="seats[FCP]" onchange="calcTotalPrice()">
-              <option value="0">Please Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-            Children
-            <select id="seats[FCC]" name="seats[FCC]" onchange="calcTotalPrice()">
-              <option value="0">Please Select</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
-          </fieldset>
-
-          <fieldset class="grid-item">
-            <legend>Customer</legend>
-            <input id="movie[id]" type="hidden" name="movie[id]">
-            <input id="movie[day]" type="hidden" name="movie[day]">
-            <input id="movie[hour]" type="hidden" name="movie[hour]">
-            <label for="cust[name]">Name </label><input id="cust[name]" type="text" name="cust[name]" pattern="^[a-zA-Z \-.']+$" required>
-            <label for="cust[email]">Email </label><input id="cust[email]" type="email" name="cust[email]" required>
-            <label for="cust[mobile]">Mobile </label><input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" pattern="^(\(04\)|04|\+614)( ?\d){8}$" required>
-            <label for="cust[card]">Credit Card </label><input id="cust[card]" type="text" name="cust[card]" pattern="^( ?\d){14,19}$" required>
-            Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" pattern="^[0-9]{4}\-[0-9]{2}$" required>
-          </fieldset>
-
-          <div class="grid-item">
-            Total: <span id="total-price">$0.00</span>
-            <input type="submit" value="Order">
-          </div>
-        </form>
-
-</div>
       </div>
-      <!------------------------------------------------------------------------------------------->
+
 
 
     </section>

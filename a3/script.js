@@ -30,8 +30,8 @@ const ticketPrices = {
 };
 //----------------------------------------------------------------------------
 
-
-window.onload = function test() {
+// when page loads adds event listeners to buttons
+window.onload = function startUpEvents() {
   var button = document.getElementById('now-showing').getElementsByTagName('button');
   for (var i = 0; i < button.length; i++) {
     button[i].addEventListener("click", addDayHour);
@@ -85,7 +85,7 @@ function addMovieGenre(e) {
 }
 //----------------------------------------------------------------------------
 
-
+// changes name of movie based on movie panel clicked
 function showBookingMovieName(movie) {
   // clears day and hour when another movie is clicked.
   document.getElementById('movie[day]').value = "";
@@ -100,7 +100,7 @@ function showBookingMovieName(movie) {
   document.getElementById(movie).style.display = "inline";
 }
 
-
+// opens the synopsis area of movie panel clicked
 function openSynopsis(movie) {
   var synopsisTabs = document.getElementsByClassName("synopsis-tabs");
   for (var i = 0; i < synopsisTabs.length; i++) {
