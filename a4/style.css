@@ -1,0 +1,642 @@
+/*
+Pattern images:
+https://www.toptal.com/designers/subtlepatterns/5-dots-pattern/
+https://www.toptal.com/designers/subtlepatterns/dust-scratches/
+*/
+h1, h2, h3, h4, h5, nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, footer, .synopsis ul li {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 20px;
+}
+
+.section-heading {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  display: inline;
+  font-family: 'Courgette', cursive;
+  font-size: 48px;
+}
+
+header img {
+  vertical-align: bottom;
+  margin-top: 10px;
+}
+
+body {
+  margin: 0px;
+}
+
+nav {
+  background-color: hsla(0, 0%, 100%, 1);
+  top: 0;
+  position: sticky;
+  z-index: 1;
+  box-shadow: 0px 6px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+nav ul {
+  margin: 0px;
+  padding: 16px;
+  overflow: hidden;
+  text-align: center;
+}
+
+nav li {
+  list-style: none;
+  display: inline;
+  padding: 10px 0px;
+}
+
+nav li a {
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #565656;
+}
+
+nav a.current {
+  border-bottom: 4px solid #FF3B3F;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #FF3B3F;
+  font-weight: bold;
+}
+
+/* prices SECTION */
+.price-box {
+  background-color: hsla(0, 0%, 93.7%, 0.95);
+  box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
+  color: #565656;
+  font-size: 18px;
+  font-family: 'Tajawal', sans-serif;
+  min-width: 400px;
+}
+
+#prices {
+  background: url('../../media/dust_scratches.png');
+  padding-bottom: 5%;
+  box-shadow: 0px 6px 5px hsla(0, 0%, 0%, 0.1);
+}
+
+#prices h1 {
+  text-align: center;
+}
+
+.price-text {
+  padding-top: 3%;
+  text-align: center;
+}
+
+.price-box h2 {
+  text-align: center;
+  background: #FF3B3F;
+  font-size: 22px;
+  margin: 0 auto;
+  color: #FFF;
+  padding: 20px 0px;
+}
+
+.price-box ul {
+  padding: 20px;
+  margin: auto;
+}
+
+.price-box ul li {
+  display: block;
+  padding: 10px 10px;
+  text-align: left;
+}
+
+.ticket-price {
+  background-color: #FF3B3F;
+  color: #FFF;
+  padding: 4px 20px;
+  margin: 0px 4px;
+  border-radius: 18px;
+  float: right;
+}
+
+#about-us, #prices {
+  min-height: 100vh;
+  text-align: justify;
+}
+
+.hero {
+  height: 100vh;
+  /* image from: https://www.wheretraveler.com/sydney/eat/sydney-s-quirkiest-cinemas-memorable-experiences-movies */
+  background-image: url("../../media/hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  color: #fff;
+  background-color: hsla(360, 100%, 0%, 0.75);
+  width: 90%;
+  border-radius: 8px;
+  top: 60%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 2%;
+  font-size: 40px;
+  box-sizing: border-box;
+}
+
+.hero-text h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.hero-text p {
+  font-size: 32px;
+}
+
+/* SEATING SECTION*/
+.chairs-info {
+  padding: 3% 0%;
+  background: url('../../media/dust_scratches.png');
+}
+
+.chairs-info>p {
+  text-align: center;
+}
+
+.chairs-info img {
+  margin-top: 4%;
+  height: 400px;
+}
+
+.chair-text h2 {
+  text-align: center;
+  background-color: #FF3B3F;
+  color: #FFF;
+  padding: 20px 0px;
+  margin: 0 auto;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.chair-text {
+  margin: 20px;
+  box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
+  border-radius: 8px 8px 18px 18px;
+}
+
+.chair-text p {
+  margin: 0 auto;
+  color: #565656;
+  background-color: hsla(0, 0%, 93.7%, 0.95);
+  padding: 20px 20px;
+  border-radius: 8px 8px 18px 18px;
+}
+
+.chair-box {
+  text-align: center;
+}
+
+/* DOLBY SYSTEMS */
+.dolby-systems {
+  padding: 3% 0%;
+  background: url('../../media/5-dots.png');
+  color: #FFF;
+}
+
+.dolby-systems>p {
+  text-align: center;
+}
+
+.dolby-1, .dolby-2 {
+  padding: 3% 0%;
+  width: 90%;
+  margin: auto;
+}
+
+.dolby-1 img, .dolby-2 img {
+  width: 100%;
+}
+
+.dolby-1 div {
+  order: 2;
+}
+
+.dolby-1 img {
+  order: 1;
+}
+
+.dolby-2 div {
+  order: 1;
+}
+
+.dolby-2 img {
+  order: 2;
+}
+
+/* NOW SHOWING SECTION */
+#now-showing {
+  background: url('../../media/5-dots.png');
+  padding: 6% 1%;
+}
+
+#now-showing>h1 {
+  margin: 0;
+  padding-bottom: 4%;
+  color: #FFF;
+  text-transform: uppercase;
+}
+
+.synopsis {
+  background: url('../../media/dust_scratches.png');
+}
+
+.synopsis ul {
+  padding: 0;
+  text-align: center;
+}
+
+.synopsis ul li {
+  display: inline-block;
+}
+
+footer {
+  padding: 20px 2%;
+  background: url('../../media/dust_scratches.png');
+}
+
+footer a {
+  color: #FF3B3F;
+}
+
+@media (min-width: 900px) and (max-width: 1500px) {
+  .dolby-systems div {
+    display: block;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .dolby-1 img, .dolby-2 img {
+    max-height: 400px;
+    width: auto;
+  }
+
+  .price-box {
+    width: 32%;
+  }
+
+  .price-box ul li span {
+    margin: 1px;
+  }
+
+  .price-box ul li {
+    display: inline-block;
+    padding: 10px 0px;
+    width: 100%;
+  }
+
+  .now-showing-grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .flex-container-price {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .booking-grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .booking-grid>:first-child {
+    order: 1;
+  }
+
+  .booking-grid>:nth-child(2) {
+    order: 3;
+  }
+
+  .booking-grid>:nth-child(3) {
+    order: 2;
+  }
+
+  .booking-grid>:nth-child(4) {
+    order: 4;
+  }
+
+  .booking-grid>:nth-child(2)>fieldset {
+    width: 700px;
+  }
+}
+
+/* WHEN THE SCREEN IS BIGGER THAN THIS NUMBER*/
+@media(min-width: 1500px) {
+  .flex-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+
+  .chair-box {
+    width: 50%;
+  }
+
+  .flex-container-price {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .dolby-1, .dolby-2 {
+    display: flex;
+    width: 80%;
+  }
+
+  .dolby-1 h1, .dolby-2 h1 {
+    padding: 5% 5% 0% 5%;
+  }
+
+  .dolby-1 p, .dolby-2 p {
+    padding: 0% 5%;
+  }
+
+  .dolby-1 img, .dolby-2 img {
+    max-height: 400px;
+    width: auto;
+  }
+
+  .hero-text {
+    width: auto;
+  }
+
+  .price-box {
+    border-radius: 8px 8px 18px 18px;
+  }
+
+  .price-box h2 {
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  .now-showing-grid {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  .booking-grid {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  .synopsis-container {
+    width: 90%;
+    grid-template-columns: auto auto;
+  }
+
+  .synopsis iframe {
+    min-width: 500px;
+  }
+
+  .booking-grid>:first-child {
+    order: 1;
+  }
+
+  .booking-grid>:nth-child(2) {
+    order: 3;
+  }
+
+  .booking-grid>:nth-child(3) {
+    order: 2;
+  }
+
+  .booking-grid>:nth-child(4) {
+    order: 4;
+  }
+
+  .booking-grid>:nth-child(2)>fieldset {
+    width: 700px;
+  }
+}
+
+/* ---------------------------------------------------------------------------- */
+.booking-grid {
+  font-family: 'Tajawal', sans-serif;
+  font-size: 18px;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  background: url('../../media/dust_scratches.png');
+}
+
+.grid-item {
+  padding: 10px;
+  position: relative;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+select {
+  display: block;
+}
+
+button, input[type=submit] {
+  font-size: 18px;
+  font-family: 'Tajawal', sans-serif;
+  border-style: none;
+  padding: 4px 20px;
+  margin: 2% 0;
+  background-color: #FF3B3F;
+  color: #FFF;
+  border-radius: 18px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  background-color: #b2292c;
+}
+
+.synopsis-tabs {
+  display: none;
+  padding: 5% 0;
+}
+
+/*-----------------------------------------------------------------*/
+.movie-box {
+  position: relative;
+  margin: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.movie-box:hover .overlay {
+  opacity: 90%;
+}
+
+.movie-box h1 {
+  color: #FFF;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  background-color: hsla(360, 100%, 0%, 0.75);
+  padding: 3%;
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+  text-align: center;
+}
+
+.movie-text {
+  width: inherit;
+  background-color: hsla(360, 100%, 0%, 0.75);
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  bottom: 25%;
+  text-align: center;
+}
+
+.ml {
+  padding: 0;
+  margin: 0;
+}
+
+.ml li {
+  display: inline-block;
+  padding: 1%;
+  color: #FFF;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.movie-name {
+  display: none;
+}
+
+#booking-section {
+  display: none;
+  background: url("../../media/dust_scratches.png");
+  padding-bottom: 3%;
+}
+
+.synopsis-container {
+  padding: 3%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  grid-template-rows: auto auto;
+}
+
+.synopsis-container>div>p {
+  padding-right: 10px;
+}
+
+.movie-box>img {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+}
+
+select {
+  display: inline-block;
+  padding: 4px 20px;
+  font-size: 18px;
+  border: 1px solid #565656;
+  border-radius: 4px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+fieldset>div>input {
+  font-size: 18px;
+  font-family: 'Tajawal', sans-serif;
+  margin: auto;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #565656;
+}
+
+.now-showing-grid {
+  display: grid;
+}
+
+.movie-rating>img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+}
+
+.booking-movie-details {
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Tajawal', sans-serif;
+  padding: 5% 0;
+}
+
+.synopsis iframe {
+  width: 100%;
+}
+
+#booking-day, #booking-hour {
+  display: inline;
+}
+
+.booking-grid>:nth-child(3)>input {
+  display: block;
+}
+
+.grid-item>div {
+  padding: 20px;
+}
+
+.grid-item>div>select, .grid-item>div>input {
+  position: absolute;
+  right: 4%;
+}
+
+.booking-form {
+  margin: auto;
+  border: 2px groove black;
+  padding: 10px;
+}
+
+.grid-item input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 10%;
+}
