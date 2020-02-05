@@ -640,3 +640,13 @@ fieldset>div>input {
   top: 0;
   right: 10%;
 }
+
+.price-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+}
+
+.price-grid > div {
+  margin: 10%;
+}

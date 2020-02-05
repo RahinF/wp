@@ -1,3 +1,7 @@
+<?php
+include("tools.php");
+include("movie-data.php");
+?>
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -113,93 +117,8 @@
         <p>On select days ticket prices are discounted!</p>
       </div>
 
-
-      <h1>Standard tickets</h1>
-      <div class="flex-container-price">
-
-        <div class="price-box">
-          <h2>Adult</h2>
-          <ul>
-            <li>Monday:<span class='ticket-price'>$15 </span></li>
-            <li>Tuesday:<span class='ticket-price'>$15</span></li>
-            <li>Wednesday:<span class='ticket-price'>$20.50</span><span class='ticket-price'>12pm $15</span></li>
-            <li>Thursday:<span class='ticket-price'>$20.50</span> <span class='ticket-price'>12pm $15</span></li>
-            <li>Friday:<span class='ticket-price'>$20.50</span><span class='ticket-price'>12pm $15</span></li>
-            <li>Saturday:<span class='ticket-price'> $20.50</span></li>
-            <li>Sunday:<span class='ticket-price'>$20.50</span></li>
-          </ul>
-        </div>
-
-        <div class="price-box">
-          <h2>Concession</h2>
-          <ul>
-            <li>Monday:<span class='ticket-price'>$13</span></li>
-            <li>Tuesday:<span class='ticket-price'>$13</span></li>
-            <li>Wednesday:<span class='ticket-price'>$18</span> <span class='ticket-price'>12pm $13</span></li>
-            <li>Thursday:<span class='ticket-price'>$18</span><span class='ticket-price'>12pm $13</span></li>
-            <li>Friday:<span class='ticket-price'>$18</span><span class='ticket-price'>12pm $13</span></li>
-            <li>Saturday:<span class='ticket-price'>$18</span></li>
-            <li>Sunday:<span class='ticket-price'>$18</span></li>
-          </ul>
-        </div>
-
-        <div class="price-box">
-          <h2>Child</h2>
-          <ul>
-            <li>Monday:<span class='ticket-price'>$11</span></li>
-            <li>Tuesday:<span class='ticket-price'>$11</span></li>
-            <li>Wednesday:<span class='ticket-price'>$15.50</span><span class='ticket-price'>12pm $11</span></li>
-            <li>Thursday:<span class='ticket-price'>$15.50</span><span class='ticket-price'>12pm $11</span></li>
-            <li>Friday:<span class='ticket-price'>$15.50</span><span class='ticket-price'>12pm $11</span></li>
-            <li>Saturday:<span class='ticket-price'>$15.50</span></li>
-            <li>Sunday:<span class='ticket-price'>$15.50</span></li>
-          </ul>
-        </div>
-
-      </div>
-
-      <h1>First Class tickets</h1>
-      <div class="flex-container-price">
-
-        <div class="price-box">
-          <h2>Adult</h2>
-          <ul>
-            <li>Monday:<span class='ticket-price'>$25</span></li>
-            <li>Tuesday:<span class='ticket-price'>$25</span></li>
-            <li>Wednesday:<span class='ticket-price'>$30</span> <span class='ticket-price'>12pm $25</span></li>
-            <li>Thursday:<span class='ticket-price'>$30</span><span class='ticket-price'>12pm $25</span></li>
-            <li>Friday:<span class='ticket-price'>$30</span><span class='ticket-price'>12pm $25</span></li>
-            <li>Saturday:<span class='ticket-price'> $30</span></li>
-            <li>Sunday:<span class='ticket-price'> $30</span></li>
-          </ul>
-        </div>
-
-        <div class="price-box">
-          <h2>Concession</h2>
-          <ul>
-            <li>Monday:<span class='ticket-price'>$23</span></li>
-            <li>Tuesday:<span class='ticket-price'>$23</span></li>
-            <li>Wednesday:<span class='ticket-price'>$27.50</span><span class='ticket-price'>12pm $23</span></li>
-            <li>Thursday:<span class='ticket-price'>$27.50</span><span class='ticket-price'>12pm $23</span></li>
-            <li>Friday:<span class='ticket-price'>$27.50</span><span class='ticket-price'>12pm $23</span></li>
-            <li>Saturday:<span class='ticket-price'> $27.50</span></li>
-            <li>Sunday:<span class='ticket-price'> $27.50</span></li>
-          </ul>
-        </div>
-
-        <div class="price-box">
-          <h2>Child</h2>
-          <ul>
-            <li>Monday:<span class='ticket-price'>$21</span></li>
-            <li>Tuesday:<span class='ticket-price'>$21</span></li>
-            <li>Wednesday:<span class='ticket-price'>$25</span><span class='ticket-price'>12pm $21</span></li>
-            <li>Thursday:<span class='ticket-price'>$25</span><span class='ticket-price'>12pm $21</span></li>
-            <li>Friday:<span class='ticket-price'>$25</span><span class='ticket-price'>12pm $21</span></li>
-            <li>Saturday:<span class='ticket-price'> $25</span></li>
-            <li>Sunday:<span class='ticket-price'> $25</span></li>
-          </ul>
-        </div>
-
+      <div class="price-grid">
+        <?php showPriceBoxes(); ?>
       </div>
     </section>
 
@@ -422,6 +341,7 @@
     </section>
 
 
+
   </main>
 
   <footer>
@@ -439,5 +359,4 @@
   </footer>
 
 </body>
-
 </html>
