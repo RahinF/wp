@@ -85,7 +85,7 @@ nav a:hover {
   color: #565656;
   font-size: 18px;
   font-family: 'Tajawal', sans-serif;
-  min-width: 400px;
+  width: 400px;
 }
 
 #prices {
@@ -297,12 +297,10 @@ footer a {
     width: auto;
   }
 
-  .price-box {
-    width: 32%;
-  }
-
-  .price-box ul li span {
-    margin: 1px;
+  .price-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
 
   .price-box ul li {
@@ -392,12 +390,10 @@ footer a {
     width: auto;
   }
 
-  .price-box {
-    border-radius: 8px 8px 18px 18px;
-  }
-
-  .price-box h2 {
-    border-radius: 8px 8px 0px 0px;
+  .price-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
   }
 
   .now-showing-grid {
@@ -486,7 +482,11 @@ button:active {
 /*-----------------------------------------------------------------*/
 .movie-box {
   position: relative;
-  margin: auto;
+  margin: 5% auto;
+  height: 300px;
+  width: 400px;
+  box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
+
 }
 
 .overlay {
@@ -502,15 +502,15 @@ button:active {
 }
 
 .movie-box:hover .overlay {
-  opacity: 90%;
+  opacity: 100%;
 }
 
 .movie-box h1 {
+  background-color: #FF3B3F;
   color: #FFF;
   position: absolute;
   bottom: 0%;
   left: 0%;
-  background-color: hsla(360, 100%, 0%, 0.75);
   padding: 3%;
   box-sizing: border-box;
   margin: auto;
@@ -518,24 +518,26 @@ button:active {
   text-transform: uppercase;
   font-size: 18px;
   text-align: center;
+  height: 15%;
+  border-radius: 0px 0px 8px 8px;
 }
 
-.movie-text {
+.movie-box>div>div {
   width: inherit;
-  background-color: hsla(360, 100%, 0%, 0.75);
-  color: white;
+  background-color: #FF3B3F;
+  color: #FFF;
   font-size: 16px;
   position: absolute;
-  bottom: 25%;
+  bottom: 15%;
   text-align: center;
 }
 
-.ml {
+.movie-box ul {
   padding: 0;
   margin: 0;
 }
 
-.ml li {
+.movie-box ul li {
   display: inline-block;
   padding: 1%;
   color: #FFF;
@@ -567,8 +569,8 @@ button:active {
 
 .movie-box>img {
   width: 100%;
-  max-width: 500px;
-  height: 300px;
+  border-radius: 8px 8px 0px 0px;
+  height: auto;
 }
 
 select {
@@ -594,17 +596,15 @@ fieldset>div>input {
 }
 
 .movie-rating>img {
-  height: 50px;
-  width: 50px;
+  width: 8%;
   position: absolute;
-  top: 2%;
+  bottom: 2%;
   right: 2%;
 }
 
 .booking-movie-details {
   text-align: center;
   font-size: 18px;
-  font-family: 'Tajawal', sans-serif;
   padding: 5% 0;
 }
 
@@ -641,12 +641,34 @@ fieldset>div>input {
   right: 10%;
 }
 
-.price-grid {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
+.price-box {
+  border-radius: 8px 8px 18px 18px;
 }
 
-.price-grid > div {
-  margin: 10%;
+.price-box h2 {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.price-grid>div {
+  margin: 10% auto;
+}
+
+#ss {
+  padding: 10px;
+  position: absolute;
+  right: 10%;
+}
+
+#ss span {
+  background: #FF3B3F;
+  border-radius: 18px;
+  color: #FFF;
+  margin: 10px;
+  padding: 4px 20px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 18px;
+}
+
+.synopsis-container img {
+  width: 20px;
 }

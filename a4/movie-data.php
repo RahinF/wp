@@ -30,6 +30,8 @@ $ticketPrices = [
   ]
 ];
 
+  echo '<div class="price-grid">';
+
   for($i = 0; $i < count($ticketType); $i++){
     echo '<div class="price-box">';
     echo '<h2>'.$ticketType[$i].'</h2>';
@@ -38,21 +40,24 @@ $ticketPrices = [
     for($a = 0; $a < count($days); $a++){
       $currentDay = $days[$a];
       if($currentDay == 'Monday' || $currentDay == 'Tuesday'){
-
-        echo '<li>'.$days[$a].':<span class="ticket-price">$'.$ticketPrices[$ticketType[$i]]["Discounted Price"].'</span></li>';
+        $dPrice = $ticketPrices[$ticketType[$i]]["Discounted Price"];
+        echo '<li>'.$days[$a].':<span class="ticket-price">$'.$dPrice.'</span></li>';
       }
       else if ($currentDay == 'Wednesday' || $currentDay == 'Thursday' || $currentDay == 'Friday'){
-        echo '<li>'.$days[$a].':<span class="ticket-price">$'.$ticketPrices[$ticketType[$i]]["Normal Price"].'</span><span class="ticket-price">12pm $'.$ticketPrices[$ticketType[$i]]["Discounted Price"].'</span></li>';
+        $dPrice = $ticketPrices[$ticketType[$i]]["Discounted Price"];
+        $nPrice = sprintf("%.2f", $ticketPrices[$ticketType[$i]]["Normal Price"]);
+        echo '<li>'.$days[$a].':<span class="ticket-price">$'.$nPrice.'</span><span class="ticket-price">12pm $'.$dPrice.'</span></li>';
       }
       else {
-        echo '<li>'.$days[$a].':<span class="ticket-price">$'.$ticketPrices[$ticketType[$i]]["Normal Price"].'</span></li>';
-
+        $nPrice = sprintf("%.2f", $ticketPrices[$ticketType[$i]]["Normal Price"]);
+        echo '<li>'.$days[$a].':<span class="ticket-price">$'.$nPrice.'</span></li>';
       }
     };
 
     echo '</ul>';
     echo '</div>';
   }
+  echo '</div>';
 }
 
 

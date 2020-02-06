@@ -38,13 +38,22 @@ window.onload = function startUpEvents() {
   }
 
   var moviePanels = document.getElementsByClassName("movie-box");
-
   for (var i = 0; i < moviePanels.length; i++) {
     moviePanels[i].addEventListener("click", addMovieGenre);
+    moviePanels[i].addEventListener("click", aaa);
   };
 
   addOption();
 }
+//----------------------------------------------------------------------------
+function aaa(a){
+  console.log(a);
+  var id = a.target.offsetParent.id;
+console.log(a);
+  console.log(id);
+  console.log(id.substr(-3, 3));
+}
+//----------------------------------------------------------------------------
 
 // auto-generated select options and adds on change event to calc prices.
 function addOption() {
@@ -118,7 +127,7 @@ function showBookingMovieName(movie) {
   for (var i = 0; i < bookingMovieName.length; i++) {
     bookingMovieName[i].style.display = "none";
   }
-  document.getElementById(movie).style.display = "inline";
+  document.getElementById(movie).style.display = "block";
 }
 
 // opens the synopsis area of movie panel clicked

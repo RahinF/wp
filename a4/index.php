@@ -117,9 +117,7 @@ include("movie-data.php");
         <p>On select days ticket prices are discounted!</p>
       </div>
 
-      <div class="price-grid">
         <?php showPriceBoxes(); ?>
-      </div>
     </section>
 
 
@@ -134,8 +132,8 @@ include("movie-data.php");
           <h1>Star Wars: The Rise of Skywalker</h1>
           <div class="movie-rating"><img src="../../media/M-rating.png" alt="M-Rating"></div>
           <div class="overlay">
-            <div class="movie-text">
-              <ul class="ml">
+            <div>
+              <ul>
                 <li><div>Mon</div><span>12pm</span></li>
                 <li><div>Tue</div><span>12pm</span></li>
                 <li><div>Wed</div><span>6pm</span></li>
@@ -153,8 +151,8 @@ include("movie-data.php");
           <h1>Frozen 2</h1>
           <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
           <div class="overlay">
-            <div class="movie-text">
-              <ul class="ml">
+            <div>
+              <ul>
                 <li><div>Wed</div><span>9pm</span></li>
                 <li><div>Thur</div><span>9pm</span></li>
                 <li><div>Fri</div><span>9pm</span></li>
@@ -171,8 +169,8 @@ include("movie-data.php");
           <h1>The Aeronauts</h1>
           <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
           <div class="overlay">
-            <div class="movie-text">
-              <ul class="ml">
+            <div>
+              <ul>
                 <li><div>Mon</div><span>6pm</span></li>
                 <li><div>Tue</div><span>6pm</span></li>
                 <li><div>Sat</div><span>3pm</span></li>
@@ -187,8 +185,8 @@ include("movie-data.php");
           <h1>JoJo Rabbit</h1>
           <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
           <div class="overlay">
-            <div class="movie-text">
-              <ul class="ml">
+            <div>
+              <ul>
                 <li><div>Wed</div><span>12pm</span></li>
                 <li><div>Thur</div><span>12pm</span></li>
                 <li><div>Fri</div><span>12pm</span></li>
@@ -229,7 +227,7 @@ include("movie-data.php");
         <div id="synopsisF2" class="synopsis-tabs synopsis-container">
           <div>
             <h2>Frozen 2</h2>
-            <h3>Rating: PG</h3>
+            <img src="../../media/PG-rating.png" alt="PG-Rating">
             <p>Elsa the Snow Queen has an extraordinary gift -- the power to create ice and snow. But no matter how happy she is to be surrounded by the people of Arendelle, Elsa finds herself strangely unsettled. After hearing a mysterious voice
               call out to her, Elsa travels to the enchanted forests and dark seas beyond her kingdom -- an adventure that soon turns into a journey of self-discovery.</p>
             <ul>
@@ -287,10 +285,10 @@ include("movie-data.php");
       <div id="booking-section">
         <div class="booking-form">
           <div class="booking-movie-details">
-            <h2 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker </h2>
-            <h2 id="bookingF2" class="movie-name">Frozen 2 </h2>
-            <h2 id="bookingTA" class="movie-name">The Aeronauts </h2>
-            <h2 id="bookingJR" class="movie-name">JoJo Rabbit </h2>
+            <h2 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker</h2>
+            <h2 id="bookingF2" class="movie-name">Frozen 2</h2>
+            <h2 id="bookingTA" class="movie-name">The Aeronauts</h2>
+            <h2 id="bookingJR" class="movie-name">JoJo Rabbit</h2>
             <h3 id="booking-day"></h3>
             <h3 id="booking-hour"></h3>
           </div>
@@ -340,7 +338,33 @@ include("movie-data.php");
 
     </section>
 
+<section>
+  <div class="movie-box" id="moviePanelACT">
+    <img src="../../media/sw.jpg" alt="Star Wars: The Rise of Skywalker movie poster">
+    <h1>Star Wars: The Rise of Skywalker</h1>
+    <div class="movie-rating"><img src="../../media/M-rating.png" alt="M-Rating"></div>
 
+<div id = "ss">
+   <span>Times</span><span>More Info</span>
+</div>
+
+
+<div>
+  <ul>
+    <li><div>Mon</div><span>12pm</span></li>
+    <li><div>Tue</div><span>12pm</span></li>
+    <li><div>Wed</div><span>6pm</span></li>
+    <li><div>Thur</div><span>6pm</span></li>
+    <li><div>Fri</div><span>6pm</span></li>
+    <li><div>Sat</div><span>12pm</span></li>
+    <li><div>Sun</div><span>12pm</span></li>
+  </ul>
+</div>
+
+
+
+  </div>
+</section>
 
   </main>
 
@@ -350,9 +374,11 @@ include("movie-data.php");
       <li>Phone: (03) 9123 4567</li>
       <li>Address: Daylesford, Victoria</li>
     </ul>
-    <div>&copy;<script>
-        document.write(new Date().getFullYear());
-      </script> Rahin Farook, s3297352. <a href="https://github.com/RahinF/wp">Github</a> Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
+    <div>&copy;
+      <script>document.write(new Date().getFullYear());</script>
+      Rahin Farook, s3297352. <a href="https://github.com/RahinF/wp">Github</a> Last modified
+      <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.
+    </div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     <script src="script.js"></script>
