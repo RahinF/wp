@@ -3,29 +3,29 @@ const movieId = ["ACT", "AHF", "ANM", "RMC"];
 const movieDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const movieHours = ["3pm", "6pm", "9pm", "12pm"];
 const ticketPrices = {
-  standardAdult: {
-    discountedPrice: "15",
-    normalPrice: "20.50",
+  'Standard Adult': {
+    'Discounted Price': 15,
+    'Normal Price': 20.50,
   },
-  standardConcession: {
-    discountedPrice: "13",
-    normalPrice: "18",
+  'Standard Concession': {
+    'Discounted Price': 13,
+    'Normal Price': 18,
   },
-  standardChild: {
-    discountedPrice: "11",
-    normalPrice: "15.50",
+  'Standard Child': {
+    'Discounted Price': 11,
+    'Normal Price': 15.50,
   },
-  firstClassAdult: {
-    discountedPrice: "25",
-    normalPrice: "30",
+  'First Class Adult': {
+    'Discounted Price': 25,
+    'Normal Price': 30,
   },
-  firstClassConcession: {
-    discountedPrice: "23",
-    normalPrice: "27.50",
+  'First Class Concession': {
+    'Discounted Price': 23,
+    'Normal Price': 27.50,
   },
-  firstClassChild: {
-    discountedPrice: "21",
-    normalPrice: "25",
+  'First Class Child': {
+    'Discounted Price': 21,
+    'Normal Price': 25,
   }
 };
 //----------------------------------------------------------------------------
@@ -173,14 +173,14 @@ function calcTotalPrice() {
     day == movieDay[4] && hour == movieHours[3]
   ) {
     for (key in ticketPrices) {
-      var price = ticketPrices[key].discountedPrice;
+      var price = ticketPrices[key]['Discounted Price'];
       var numticket = seatValues[i];
       totalPrice += parseFloat(price * numticket);
       i++;
     };
   } else {
     for (key in ticketPrices) {
-      var price = ticketPrices[key].normalPrice;
+      var price = ticketPrices[key]['Normal Price'];
       var numticket = seatValues[i];
       totalPrice += parseFloat(price * numticket);
       i++;
