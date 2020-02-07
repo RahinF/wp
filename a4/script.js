@@ -40,20 +40,71 @@ window.onload = function startUpEvents() {
   var moviePanels = document.getElementsByClassName("movie-box");
   for (var i = 0; i < moviePanels.length; i++) {
     moviePanels[i].addEventListener("click", addMovieGenre);
-    moviePanels[i].addEventListener("click", aaa);
   };
 
   addOption();
+
+  var synopsisButton = document.getElementsByClassName('movie-box-more-info');
+  for (var i = 0; i < synopsisButton.length; i++) {
+    synopsisButton[i].addEventListener("click", openSynopsis);
+  }
+
+  var sessionButton = document.getElementsByClassName('movie-box-session');
+  for (var i = 0; i < sessionButton.length; i++) {
+    sessionButton[i].addEventListener("click", showSessionTimes);
+  }
+
 }
+
+
 //----------------------------------------------------------------------------
-function aaa(a){
-  console.log(a);
-  var id = a.target.offsetParent.id;
-console.log(a);
-  console.log(id);
-  console.log(id.substr(-3, 3));
+// opens the synopsis area of movie panel clicked and changes name of booking area
+function openSynopsis(moviePanel) {
+  var moviePanelID = moviePanel.target.offsetParent.id.substr(-3, 3);
+  var synopsisTabs = document.getElementsByClassName("synopsis-tabs");
+  var bookingMovieName = document.getElementsByClassName("movie-name");
+
+  // clears day and hour when another movie is clicked.
+  document.getElementById('movie[day]').value = "";
+  document.getElementById('movie[hour]').value = "";
+  document.getElementById('booking-day').innerHTML = "";
+  document.getElementById('booking-hour').innerHTML = "";
+
+  for (var i = 0; i < synopsisTabs.length; i++) {
+    synopsisTabs[i].style.display = "none";
+    bookingMovieName[i].style.display = "none";
+  }
+
+  for (var i = 0; i < synopsisTabs.length; i++) {
+    var synopsisID = synopsisTabs[i].id;
+    if (synopsisID.includes(moviePanelID)) {
+      document.getElementById(synopsisID).style.display = "grid";
+      document.getElementById(synopsisID).scrollIntoView();
+    }
+
+    // changes name of movie based on movie panel clicked
+    var bookingID = bookingMovieName[i].id;
+    if (bookingID.includes(moviePanelID)) {
+      document.getElementById(bookingID).style.display = "block";
+    }
+  }
 }
+
 //----------------------------------------------------------------------------
+// toggle movie times
+function showSessionTimes(moviePanel) {
+
+  var movieSessionTimes = moviePanel.target.offsetParent.getElementsByClassName("movie-session-times")[0];
+
+  if (!movieSessionTimes.style.display || movieSessionTimes.style.display == "none") {
+    movieSessionTimes.style.display = "block";
+  } else {
+    movieSessionTimes.style.display = "none";
+  }
+}
+
+//----------------------------------------------------------------------------
+
 
 // auto-generated select options and adds on change event to calc prices.
 function addOption() {
@@ -115,31 +166,6 @@ function addMovieGenre(e) {
 }
 //----------------------------------------------------------------------------
 
-// changes name of movie based on movie panel clicked
-function showBookingMovieName(movie) {
-  // clears day and hour when another movie is clicked.
-  document.getElementById('movie[day]').value = "";
-  document.getElementById('movie[hour]').value = "";
-  document.getElementById('booking-day').innerHTML = "";
-  document.getElementById('booking-hour').innerHTML = "";
-
-  var bookingMovieName = document.getElementsByClassName("movie-name");
-  for (var i = 0; i < bookingMovieName.length; i++) {
-    bookingMovieName[i].style.display = "none";
-  }
-  document.getElementById(movie).style.display = "block";
-}
-
-// opens the synopsis area of movie panel clicked
-function openSynopsis(movie) {
-  var synopsisTabs = document.getElementsByClassName("synopsis-tabs");
-  for (var i = 0; i < synopsisTabs.length; i++) {
-    synopsisTabs[i].style.display = "none";
-  }
-  document.getElementById(movie).style.display = "grid";
-  var synopsisCurrent = document.getElementsByClassName("synopsis-tabs");
-  document.getElementById(movie).scrollIntoView();
-}
 
 // changes the appearance of nav links based on the current section
 window.onscroll = function() {

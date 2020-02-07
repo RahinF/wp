@@ -127,12 +127,13 @@ include("movie-data.php");
 
       <div class="now-showing-grid">
 
-        <div class="movie-box" id="moviePanelACT" onclick=" openSynopsis('synopsisSW');showBookingMovieName('bookingSW')">
+        <div class="movie-box" id="moviePanelACT">
           <img src="../../media/sw.jpg" alt="Star Wars: The Rise of Skywalker movie poster">
           <h1>Star Wars: The Rise of Skywalker</h1>
-          <div class="movie-rating"><img src="../../media/M-rating.png" alt="M-Rating"></div>
-          <div class="overlay">
-            <div>
+          <div><img class="movie-rating" src="../../media/M-rating.png" alt="M-Rating"></div>
+          <div class = "movie-box-session">Times</div>
+          <div class = "movie-box-more-info">Info</div>
+          <div class="movie-session-times">
               <ul>
                 <li><div>Mon</div><span>12pm</span></li>
                 <li><div>Tue</div><span>12pm</span></li>
@@ -142,16 +143,16 @@ include("movie-data.php");
                 <li><div>Sat</div><span>12pm</span></li>
                 <li><div>Sun</div><span>12pm</span></li>
               </ul>
-            </div>
           </div>
         </div>
 
-        <div class="movie-box" id="moviePanelANM" onclick="openSynopsis('synopsisF2'); showBookingMovieName('bookingF2')">
+        <div class="movie-box" id="moviePanelANM">
           <img src="../../media/f2.png" alt="Frozen 2 movie poster">
           <h1>Frozen 2</h1>
-          <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
-          <div class="overlay">
-            <div>
+          <div><img class="movie-rating" src="../../media/PG-rating.png" alt="PG-Rating"></div>
+          <div class = "movie-box-session">Times</div>
+          <div class = "movie-box-more-info">Info</div>
+          <div class="movie-session-times">
               <ul>
                 <li><div>Wed</div><span>9pm</span></li>
                 <li><div>Thur</div><span>9pm</span></li>
@@ -159,17 +160,17 @@ include("movie-data.php");
                 <li><div>Sat</div><span>6pm</span></li>
                 <li><div>Sun</div><span>6pm</span></li>
               </ul>
-            </div>
           </div>
         </div>
 
 
-        <div class="movie-box" id="moviePanelRMC" onclick="openSynopsis('synopsisTA');showBookingMovieName('bookingTA')">
+        <div class="movie-box" id="moviePanelRMC">
           <img src="../../media/aeronauts-poster.jpg" alt="The Aeronauts movie poster">
           <h1>The Aeronauts</h1>
-          <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
-          <div class="overlay">
-            <div>
+          <div><img class="movie-rating" src="../../media/PG-rating.png" alt="PG-Rating"></div>
+          <div class = "movie-box-session">Times</div>
+          <div class = "movie-box-more-info">Info</div>
+          <div class="movie-session-times">
               <ul>
                 <li><div>Mon</div><span>6pm</span></li>
                 <li><div>Tue</div><span>6pm</span></li>
@@ -178,14 +179,14 @@ include("movie-data.php");
               </ul>
             </div>
           </div>
-        </div>
 
-        <div class="movie-box" id="moviePanelAHF" onclick="openSynopsis('synopsisJR');showBookingMovieName('bookingJR')">
+        <div class="movie-box" id="moviePanelAHF">
           <img src="../../media/jojo-rabbit-poster.jpg" alt="JoJo Rabbit movie poster">
           <h1>JoJo Rabbit</h1>
-          <div class="movie-rating"><img src="../../media/PG-rating.png" alt="PG-Rating"></div>
-          <div class="overlay">
-            <div>
+          <div><img class="movie-rating" src="../../media/PG-rating.png" alt="PG-Rating"></div>
+          <div class = "movie-box-session">Times</div>
+          <div class = "movie-box-more-info">Info</div>
+          <div class="movie-session-times">
               <ul>
                 <li><div>Wed</div><span>12pm</span></li>
                 <li><div>Thur</div><span>12pm</span></li>
@@ -195,7 +196,6 @@ include("movie-data.php");
               </ul>
             </div>
           </div>
-        </div>
 
       </div>
 
@@ -204,7 +204,7 @@ include("movie-data.php");
 
       <div class="synopsis">
 
-        <div id="synopsisSW" class="synopsis-tabs synopsis-container">
+        <div id="synopsisACT" class="synopsis-tabs synopsis-container">
           <div>
             <h2>Star Wars: The Rise of Skywalker</h2>
             <h3>Rating: M</h3>
@@ -224,10 +224,10 @@ include("movie-data.php");
           </div>
         </div>
 
-        <div id="synopsisF2" class="synopsis-tabs synopsis-container">
+        <div id="synopsisANM" class="synopsis-tabs synopsis-container">
           <div>
             <h2>Frozen 2</h2>
-            <img src="../../media/PG-rating.png" alt="PG-Rating">
+            <h3>Rating: PG</h3>
             <p>Elsa the Snow Queen has an extraordinary gift -- the power to create ice and snow. But no matter how happy she is to be surrounded by the people of Arendelle, Elsa finds herself strangely unsettled. After hearing a mysterious voice
               call out to her, Elsa travels to the enchanted forests and dark seas beyond her kingdom -- an adventure that soon turns into a journey of self-discovery.</p>
             <ul>
@@ -243,7 +243,7 @@ include("movie-data.php");
           </div>
         </div>
 
-        <div id="synopsisTA" class="synopsis-tabs synopsis-container">
+        <div id="synopsisRMC" class="synopsis-tabs synopsis-container">
           <div>
             <h1>The Aeronauts</h1>
             <h3>Rating: PG</h3>
@@ -261,7 +261,7 @@ include("movie-data.php");
           </div>
         </div>
 
-        <div id="synopsisJR" class="synopsis-tabs synopsis-container">
+        <div id="synopsisAHF" class="synopsis-tabs synopsis-container">
           <div>
             <h1>JoJo Rabbit</h1>
             <h3>Rating: PG</h3>
@@ -285,10 +285,10 @@ include("movie-data.php");
       <div id="booking-section">
         <div class="booking-form">
           <div class="booking-movie-details">
-            <h2 id="bookingSW" class="movie-name">Star Wars: The Rise of Skywalker</h2>
-            <h2 id="bookingF2" class="movie-name">Frozen 2</h2>
-            <h2 id="bookingTA" class="movie-name">The Aeronauts</h2>
-            <h2 id="bookingJR" class="movie-name">JoJo Rabbit</h2>
+            <h2 id="bookingACT" class="movie-name">Star Wars: The Rise of Skywalker</h2>
+            <h2 id="bookingANM" class="movie-name">Frozen 2</h2>
+            <h2 id="bookingRMC" class="movie-name">The Aeronauts</h2>
+            <h2 id="bookingAHF" class="movie-name">JoJo Rabbit</h2>
             <h3 id="booking-day"></h3>
             <h3 id="booking-hour"></h3>
           </div>
@@ -337,34 +337,6 @@ include("movie-data.php");
 
 
     </section>
-
-<section>
-  <div class="movie-box" id="moviePanelACT">
-    <img src="../../media/sw.jpg" alt="Star Wars: The Rise of Skywalker movie poster">
-    <h1>Star Wars: The Rise of Skywalker</h1>
-    <div class="movie-rating"><img src="../../media/M-rating.png" alt="M-Rating"></div>
-
-<div id = "ss">
-   <span>Times</span><span>More Info</span>
-</div>
-
-
-<div>
-  <ul>
-    <li><div>Mon</div><span>12pm</span></li>
-    <li><div>Tue</div><span>12pm</span></li>
-    <li><div>Wed</div><span>6pm</span></li>
-    <li><div>Thur</div><span>6pm</span></li>
-    <li><div>Fri</div><span>6pm</span></li>
-    <li><div>Sat</div><span>12pm</span></li>
-    <li><div>Sun</div><span>12pm</span></li>
-  </ul>
-</div>
-
-
-
-  </div>
-</section>
 
   </main>
 

@@ -251,14 +251,13 @@ nav a:hover {
 
 /* NOW SHOWING SECTION */
 #now-showing {
-  background: url('../../media/5-dots.png');
+  background: url('../../media/dust_scratches.png');
   padding: 6% 1%;
 }
 
 #now-showing>h1 {
   margin: 0;
   padding-bottom: 4%;
-  color: #FFF;
   text-transform: uppercase;
 }
 
@@ -486,24 +485,9 @@ button:active {
   height: 300px;
   width: 400px;
   box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
-
+  border-radius: 8px;
 }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-}
-
-.movie-box:hover .overlay {
-  opacity: 100%;
-}
 
 .movie-box h1 {
   background-color: #FF3B3F;
@@ -522,8 +506,9 @@ button:active {
   border-radius: 0px 0px 8px 8px;
 }
 
-.movie-box>div>div {
-  width: inherit;
+.movie-session-times {
+  display: none;
+  width: 100%;
   background-color: #FF3B3F;
   color: #FFF;
   font-size: 16px;
@@ -595,10 +580,10 @@ fieldset>div>input {
   display: grid;
 }
 
-.movie-rating>img {
-  width: 8%;
+.movie-rating  {
+  width: 10%;
   position: absolute;
-  bottom: 2%;
+  top: 6%;
   right: 2%;
 }
 
@@ -653,21 +638,36 @@ fieldset>div>input {
   margin: 10% auto;
 }
 
-#ss {
-  padding: 10px;
+.movie-box-session {
   position: absolute;
-  right: 10%;
-}
-
-#ss span {
+  right: 0%;
+  bottom: 40%;
+  width: 10%;
   background: #FF3B3F;
-  border-radius: 18px;
+  border-radius: 18px 0px  0px 18px;
   color: #FFF;
-  margin: 10px;
-  padding: 4px 20px;
+  padding: 10px 20px;
   font-family: 'Tajawal', sans-serif;
   font-size: 18px;
+  text-align: center;
+  user-select: none;
 }
+
+.movie-box-more-info {
+  position: absolute;
+  right: 0%;
+  bottom: 60%;
+  width: 10%;
+  text-align: center;
+  background: #FF3B3F;
+  border-radius: 18px 0px  0px 18px;
+  color: #FFF;
+  padding: 10px 20px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 18px;
+  user-select: none;
+}
+
 
 .synopsis-container img {
   width: 20px;
