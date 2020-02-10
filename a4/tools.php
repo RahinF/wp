@@ -18,5 +18,10 @@ function printMyCode() {
   echo '</ol></pre>';
 }
 
+if (isset($_POST['session-reset'])) {
+  foreach($_SESSION as $something => &$whatever) {
+    unset($whatever);
+  }
+}
 
 ?>

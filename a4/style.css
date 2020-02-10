@@ -488,7 +488,6 @@ button:active {
   border-radius: 8px;
 }
 
-
 .movie-box h1 {
   background-color: #FF3B3F;
   color: #FFF;
@@ -580,7 +579,7 @@ fieldset>div>input {
   display: grid;
 }
 
-.movie-rating  {
+.movie-rating {
   width: 10%;
   position: absolute;
   top: 6%;
@@ -644,7 +643,7 @@ fieldset>div>input {
   bottom: 40%;
   width: 10%;
   background: #FF3B3F;
-  border-radius: 18px 0px  0px 18px;
+  border-radius: 18px 0px 0px 18px;
   color: #FFF;
   padding: 10px 20px;
   font-family: 'Tajawal', sans-serif;
@@ -660,7 +659,7 @@ fieldset>div>input {
   width: 10%;
   text-align: center;
   background: #FF3B3F;
-  border-radius: 18px 0px  0px 18px;
+  border-radius: 18px 0px 0px 18px;
   color: #FFF;
   padding: 10px 20px;
   font-family: 'Tajawal', sans-serif;
@@ -668,7 +667,46 @@ fieldset>div>input {
   user-select: none;
 }
 
-
 .synopsis-container img {
   width: 20px;
+}
+
+#receipt {
+  position: relative;
+  margin: auto;
+  height: 29.7cm;
+  max-width: 21cm;
+  box-sizing: border-box;
+  background: #FFF;
+  box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
+}
+
+.receipt-header >h1 {
+  display: inline;
+  font-family: 'Courgette', cursive;
+}
+
+.receipt-header >img {
+  vertical-align: bottom;
+  margin-top: 10px;
+}
+
+.receipt-header {
+  text-align: center;
+
+  padding: 5%;
+}
+
+.receipt-text {
+  padding: 5%;
+}
+
+.lunardo-info {
+  position: absolute;
+  right: 5%;
+}
+
+.aa {
+  background: url("../../media/dust_scratches.png");
+  padding: 2%;
 }

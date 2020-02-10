@@ -60,6 +60,48 @@ $ticketPrices = [
   echo '</div>';
 }
 
+// function showMoviePanel() {
+// $arr = [];
+//
+//    $fp = fopen('movie-times.csv','r');
+//    if (($headings = fgetcsv($fp, 0, ",")) !== false) {
+//      while ( $cells = fgetcsv($fp, 0, ",")) {
+//        for ($x=1;$x< count($cells); $x++){
+//          $arr[$cells[0]][$headings[$x]]=$cells[$x];
+//        }
+//      }
+//    }
+//
+//   fclose($fp);
+// //----------------------------------------------------------------------------
+// echo count($arr["LC000"]);
+//
+// for ($i = 0;$i <count($arr);$i++){
+//   for ($a = 4; $a <count($arr['LC00'.$i]) $a++){
+//
+//   }
+// }
+// preShow($arr );
+// //----------------------------------------------------------------------------
+//
+//   for($i = 0; $i < count($pumps); $i++){
+//     echo '<div id="moviePanel'.$pumps["LC00".$i]["Genre"].'" class="movie-box">';
+//     echo '<img src="../../media/movie-'.$pumps["LC00".$i]["Genre"].'.jpg" alt="'.$pumps["LC00".$i]["Name"].'">';
+//     echo '<h1>'.$pumps["LC00".$i]["Name"].'</h1>';
+//     echo '<div><img class="movie-rating" src="../../media/'.$pumps["LC00".$i]["Rating"].'-rating.png" alt="'.$pumps["LC00".$i]["Rating"].'-Rating"></div>';
+//     echo '<div class = "movie-box-session">Times</div>';
+//     echo '<div class = "movie-box-more-info">Info</div>';
+//     echo '<div class="movie-session-times">';
+//     echo '<ul>';
+//
+//   for ($a = 0; $a < 7; $a++){
+//     echo '<li><div>Mon</div><span>12pm</span></li>';
+//   }
+//   echo '</ul>';
+//   echo '</div>';
+//   echo '</div>';
+//   }
+// }
 
 
 ?>

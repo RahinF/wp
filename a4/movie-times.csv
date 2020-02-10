@@ -1,0 +1,5 @@
+MovieID,Name,Genre,Rating,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+LC000,Star Wars: The Rise of Skywalker,ACT,M,12pm,12pm,6pm,6pm,6pm,12pm,12pm
+LC001,Frozen 2,ANM,PG,,,9pm,9pm,9pm,6pm,6pm
+LC002,The Aeronauts,RMC,PG,6pm,6pm,,,,3pm,3pm
+LC003,JoJo Rabbit,AHF,PG,,,12pm,12pm,12pm,9pm,9pm

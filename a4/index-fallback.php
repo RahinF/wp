@@ -1,6 +1,6 @@
-<!-- 
+<!--
   To be used only in an emergency, ie
-  when your A3 index.php page is broken 
+  when your A3 index.php page is broken
 -->
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    
+
     <header>
       <h1>🌕 Lunardo Cinema</h1>
     </header>
@@ -43,8 +43,9 @@
       </form>
     </main>
 
+
     <footer>
     </footer>
-    
+
   </body>
 </html>
