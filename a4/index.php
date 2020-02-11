@@ -3,51 +3,84 @@ include("tools.php");
 include("movie-data.php");
 
 if(!empty($_POST)){
-//$custName = $_POST['cust']["name"];
-//$custEmail = $_POST['cust']["email"];
-//$custMobile = $_POST['cust']["mobile"];
-$custCard = $_POST['cust']["card"];
-$custExpiry = $_POST['cust']["expiry"];
-$seatsSTA = $_POST['seats']["STA"];
-preshow($_POST);
+  $custName = filter_var($_POST["cust"]["name"], FILTER_SANITIZE_STRING);
+  $custEmail = $_POST["cust"]["email"];
+  $custMobile = $_POST["cust"]["mobile"];
+  $custCard = $_POST["cust"]["card"];
+  $custExpiry = $_POST["cust"]["expiry"];
+  $movieID = $_POST["movie"]["id"];
+  $movieDay = $_POST["movie"]["day"];
+  $movieHour = $_POST["movie"]["hour"];
 
-if ($seatsSTA <= 0 || $seatsSTA > 9){
-echo 'value is zero or nine';
-} else {
-print_r($seatsSTA);
+  $errorCount = 0;
+
+// checks seats
+  $seatCount = 0;
+  foreach ($_POST["seats"] as $numberOfSeats){
+    if($numberOfSeats <= 0 || $numberOfSeats > 9){
+      $seatCount++;
+      if ($seatCount == 6){
+        $errorCount++;
+      }
+    }
+  }
+
+  // name validation
+  if(!preg_match("/^[a-zA-Z \-.']+$/", $custName)){
+    $errCustName = '<p class= "input-error">Please input a valid name</p>';
+    $errorCount++;
+  } else {$errCustName = "";}
+
+  // validate email
+  if (!filter_var($custEmail, FILTER_VALIDATE_EMAIL)) {
+    $errCustEmail =  '<p class= "input-error">Please input a valid email address</p>';
+    $errorCount++;
+  } else {$errCustEmail = "";}
+
+  // validate mobile
+  if(!preg_match("/^(\(04\)|04|\+614)( ?\d){8}$/", $custMobile)){
+    $errCustMobile =  '<p class= "input-error">Must contain 10 digit and start with 04 or +614</p>';
+    $errorCount++;
+  } else {$errCustMobile = "";}
+
+  // validate card
+  if(!preg_match("/^( ?\d){14,19}$/", $custCard)){
+    $errCustCard =  '<p class= "input-error">Must contain 14-19 digits</p>';
+    $errorCount++;
+ } else {$errCustCard = "";}
+
+
+ // validate expiry
+ if(!preg_match("/^[0-9]{4}\-[0-9]{2}$/", $custExpiry)){
+   $errCustExpiry =   '<p class= "input-error">Please select a valid date</p>';
+   $errorCount++;
+  } else {$errCustExpiry = "";}
+
+// if no seats are selected
+  if ($seatCount == 6){$errSeats = '<p class="input-error">Need to buy at least 1 seat</p>';}
+
+// if movie is selected or not
+  if (empty($movieID)){
+    $errMovieID = '<p class="input-error">Please select a movie</p>';
+    $errorCount++;
+  } else {$errMovieID = "";}
+
+// if session is selected or not
+  if (isset($movieID) && empty($movieDay) || empty($movieHour)){
+    $errMovieTime = '<p class="input-error">Please select a session time</p>';
+    $errorCount++;
+  } else {$errMovieTime = "";}
+
+// redirect if ok
+  if ($errorCount == 0){
+    $_SESSION = $_POST;
+    header("location: receipt.php");
+  }
 }
 
-
-
-// validate email
-if( filter_var($_POST['cust']["email"],FILTER_VALIDATE_EMAIL) ) {
-  echo "VALID <br/>";
-}else{
-  echo "INVALID <br/>";
-}
-
-// name validation
-if(!preg_match("/^[a-zA-Z \-.']+$/", $_POST['cust']["name"])){
-  echo "INVALID name<br/>";
-}
-
-// validate mobile
-if(!preg_match("/^(\(04\)|04|\+614)( ?\d){8}$/", $_POST['cust']["mobile"])){
-  echo "INVALID mobile<br/>";
-}
-
-if(!preg_match("/^[a-zA-Z \-.']+$/", $_POST['cust']["name"])){
-  echo "INVALID name<br/>";
-}
-
-if(!preg_match("/^[a-zA-Z \-.']+$/", $_POST['cust']["name"])){
-  echo "INVALID name<br/>";
-}}
-
-$_SESSION = $_POST;
-
-//  print_r($_SESSION);
 ?>
+
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -162,7 +195,6 @@ $_SESSION = $_POST;
         <h1 class="section-heading">Ticket Prices</h1>
         <p>On select days ticket prices are discounted!</p>
       </div>
-
         <?php showPriceBoxes(); ?>
     </section>
 
@@ -331,6 +363,7 @@ $_SESSION = $_POST;
       <div id="booking-section">
         <div class="booking-form">
           <div class="booking-movie-details">
+
             <h2 id="bookingACT" class="movie-name">Star Wars: The Rise of Skywalker</h2>
             <h2 id="bookingANM" class="movie-name">Frozen 2</h2>
             <h2 id="bookingRMC" class="movie-name">The Aeronauts</h2>
@@ -339,8 +372,15 @@ $_SESSION = $_POST;
             <h3 id="booking-hour"></h3>
           </div>
 
+          <?php
+          if (isset($movieID)){echo $errMovieID;}
+          if (isset($movieDay) && isset($movieHour)){echo $errMovieTime;}
+          if (!empty($_POST)){echo $errSeats;}
+          ?>
+
           <form class="booking-grid" action="index.php" method="post">
             <div>
+
               <fieldset class="grid-item">
                 <legend>Standard</legend>
                 <div>Adults<select id="seats[STA]" name="seats[STA]"></select></div>
@@ -355,17 +395,42 @@ $_SESSION = $_POST;
                 <div>Children<select id="seats[FCC]" name="seats[FCC]"></select></div>
               </fieldset>
             </div>
+
             <div>
               <fieldset class="grid-item">
                 <legend>Customer</legend>
-                <input id="movie[id]" type="hidden" name="movie[id]">
-                <input id="movie[day]" type="hidden" name="movie[day]">
-                <input id="movie[hour]" type="hidden" name="movie[hour]">
-                <div><label for="cust[name]">Name</label><input id="cust[name]" type="text" name="cust[name]" placeholder="John Smith" required></div>
-                <div><label for="cust[email]">Email</label><input id="cust[email]" type="email" name="cust[email]" placeholder="example@mail.com" required></div>
-                <div><label for="cust[mobile]">Mobile</label><input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" required></div>
-                <div><label for="cust[card]">Credit Card</label><input id="cust[card]" type="text" name="cust[card]" placeholder="0123 4567 8901 2345" pattern="^( ?\d){14,19}$" required></div>
-                <div>Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" pattern="^[0-9]{4}\-[0-9]{2}$" required></div>
+                <input id="movie[id]" type="hidden" name="movie[id]" value= "<?php if(!empty($_POST)){echo $movieID; }?>">
+                <input id="movie[day]" type="hidden" name="movie[day]" value= "<?php if(!empty($_POST)){echo $movieDay; }?>">
+                <input id="movie[hour]" type="hidden" name="movie[hour]" value= "<?php if(!empty($_POST)){echo $movieHour; }?>">
+
+                <div>
+                  <?php if(isset($custName)){echo $errCustName;} ?>
+                  <label for="cust[name]">Name</label>
+                  <input id="cust[name]" type="text" name="cust[name]" placeholder="John Smith" value= "<?php if(!empty($_POST)){echo $custName;}?>" required>
+                </div>
+
+                <div>
+                  <?php if(isset($custEmail)){echo $errCustEmail;} ?>
+                  <label for="cust[email]">Email</label>
+                  <input id="cust[email]" type="email" name="cust[email]" placeholder="example@mail.com" value= "<?php if(!empty($_POST)){echo $custEmail;}?>" required>
+                </div>
+
+                <div>
+                  <?php if(isset($custMobile)){echo $errCustMobile;} ?>
+                  <label for="cust[mobile]">Mobile</label>
+                  <input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" value= "<?php if(!empty($_POST)){echo $custMobile;}?>" required>
+                </div>
+
+                <div>
+                  <?php if(isset($custCard)){echo $errCustCard;} ?>
+                  <label for="cust[card]">Credit Card</label>
+                  <input id="cust[card]" type="text" name="cust[card]" placeholder="0123 4567 8901 2345" value= "<?php if(!empty($_POST)){echo $custCard;}?>" required>
+                </div>
+
+                <div>
+                  <?php if(isset($custExpiry)){echo $errCustExpiry;} ?>
+                  Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" value= "<?php if(!empty($_POST)){echo $custExpiry;}?>" required>
+                </div>
               </fieldset>
 
 
@@ -404,9 +469,11 @@ $_SESSION = $_POST;
   </footer>
 
   <?php
+  preshow($_POST);
+  echo "session";
+  preshow($_SESSION);
+  printMyCode();
+  ?>
 
-
-   //print_r($_SESSION);
-  printMyCode(); ?>
 </body>
 </html>

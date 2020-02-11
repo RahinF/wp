@@ -144,10 +144,10 @@ function addDayHour(e) {
   }
 
   // displays booking area
-  var bookingSection = document.getElementById('booking-section');
-  if (bookingSection.style.display = "none") {
-    bookingSection.style.display = "grid";
-  }
+  // var bookingSection = document.getElementById('booking-section');
+  // if (bookingSection.style.display = "none") {
+  //   bookingSection.style.display = "grid";
+  // }
   // scrolls to booking area
   document.getElementById("booking-section").scrollIntoView();
 }

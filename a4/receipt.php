@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if (empty($_SESSION)){
+  header("Location: index.php");
+} //else {$_SESSION = [];}
+print_r($_SESSION) ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css?family=Courgette|Montserrat|Tajawal&display=swap" rel="stylesheet">
 </head>
   <body>
-<div class="aa">
+<div class="receipt-box">
 <div id="receipt">
   <div class="receipt-header">
     <img src="../../media/logo.png" alt="Lunardo Logo">
@@ -32,10 +39,11 @@
   </div>
 
 <div class = "receipt-text">
-  <p>movie:</p>
-  <p>day:</p>
-  <p>time:</p>
-  <p>cost:</p>
+  <p>Name: <?php echo $_SESSION["cust"]["name"]; ?></p>
+  <p>Movie: <?php echo $_SESSION["movie"]["id"]; ?></p>
+  <p>Day: <?php echo $_SESSION["movie"]["day"]; ?></p>
+  <p>Time: <?php echo $_SESSION["movie"]["hour"]; ?></p>
+  <p>Cost: </p>
 </div>
 
 </div>
