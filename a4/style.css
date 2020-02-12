@@ -721,3 +721,30 @@ legend {
   color: #FF3B3F;
   margin: 0;
 }
+
+.ticket {
+  min-width: 50%;
+  max-width: 50%;
+  min-height: 15%;
+  border: 2px dotted #FFF;
+  background: #FF3B3F;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  color: #FFF;
+
+}
+.ticket img {
+  display: inline;
+  opacity: 0.5;
+  height: 10%;
+}
+.ticket h1{
+  position: absolute;
+  top: 20%;
+ left: 5%;
+  margin: 0;
+  font-size: 100px;
+  opacity: .2;
+  font-family: 'Courgette', cursive;
+}

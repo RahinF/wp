@@ -3,8 +3,43 @@ session_start();
 
 if (empty($_SESSION)){
   header("Location: index.php");
-} //else {$_SESSION = [];}
-print_r($_SESSION) ?>
+} else {
+
+
+  // merge $_POST into single array
+  $receiptData['date'] = date("h:ia d/m/Y");
+  $cust = [$_SESSION['cust']['name'],$_SESSION['cust']['email'],$_SESSION['cust']['mobile']];
+  $receiptData+=array_merge($cust,  $_SESSION['movie'], $_SESSION['seats']);
+  $receiptData['cost'] =  $_SESSION['cost'];
+
+  // write to file
+  $fp = fopen("booking.txt", "a");
+  flock($fp, LOCK_EX);
+  fputcsv($fp, $receiptData,"\t");
+  flock($fp, LOCK_UN);
+  fclose($fp);
+
+// display individual tickets
+function showTickets(){
+foreach($_SESSION['seats'] as $seat){
+  if ($seat > 0){
+    for($i = 0; $i < $seat; $i++){
+    echo '<div class="ticket">';
+
+    echo    '<h1>Lunardo</h1>';
+
+    echo '<p>'.$_SESSION["movie"]["id"].'</p>';
+    echo $_SESSION["movie"]["day"]. " ";
+    echo $_SESSION["movie"]["hour"]. " ";
+    echo array_search ($seat, $_SESSION['seats']).'<br>';
+    echo '</div>';
+  }
+}
+}}
+
+
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,11 +75,30 @@ print_r($_SESSION) ?>
 
 <div class = "receipt-text">
   <p>Name: <?php echo $_SESSION["cust"]["name"]; ?></p>
-  <p>Movie: <?php echo $_SESSION["movie"]["id"]; ?></p>
+  <p>Movie: <?php
+
+  switch ($_SESSION["movie"]["id"]) {
+    case 'ACT':
+      echo "Star Wars: The Rise of Skywalker";
+      break;
+    case 'ANM':
+      echo "Frozen 2";
+      break;
+    case 'RMC':
+      echo "The Aeronauts";
+      break;
+    case 'AHF':
+      echo "Jojo Rabbit";
+      break;
+  }
+
+  ?></p>
   <p>Day: <?php echo $_SESSION["movie"]["day"]; ?></p>
   <p>Time: <?php echo $_SESSION["movie"]["hour"]; ?></p>
-  <p>Cost: </p>
+  <p>Cost: <?php echo $_SESSION["cost"]; ?></p>
 </div>
+
+<?php showTickets(); ?>
 
 </div>
 <div>

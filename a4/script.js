@@ -223,5 +223,6 @@ function calcTotalPrice() {
   };
 
   // write result to span
-  document.getElementById('total-price').innerHTML = "$" + totalPrice.toFixed(2);
+  document.getElementById('total-price-span').innerHTML = "$" + totalPrice.toFixed(2);
+  document.getElementById('total-price').value = "$" + totalPrice.toFixed(2);
 }

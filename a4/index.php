@@ -2,6 +2,8 @@
 include("tools.php");
 include("movie-data.php");
 
+//$_POST = [];
+
 if(!empty($_POST)){
   $custName = filter_var($_POST["cust"]["name"], FILTER_SANITIZE_STRING);
   $custEmail = $_POST["cust"]["email"];
@@ -57,7 +59,9 @@ if(!empty($_POST)){
   } else {$errCustExpiry = "";}
 
 // if no seats are selected
-  if ($seatCount == 6){$errSeats = '<p class="input-error">Need to buy at least 1 seat</p>';}
+  if ($seatCount == 6){
+    $errSeats = '<p class="input-error">Need to buy at least 1 seat</p>';
+  } else {$errSeats = "";}
 
 // if movie is selected or not
   if (empty($movieID)){
@@ -71,9 +75,11 @@ if(!empty($_POST)){
     $errorCount++;
   } else {$errMovieTime = "";}
 
+//$_POST += ['cost' => $totalCost];
 // redirect if ok
   if ($errorCount == 0){
-    $_SESSION = $_POST;
+    //$_POST['cost'] += ['c3t'];
+  $_SESSION = $_POST;
     header("location: receipt.php");
   }
 }
@@ -431,16 +437,18 @@ if(!empty($_POST)){
                   <?php if(isset($custExpiry)){echo $errCustExpiry;} ?>
                   Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" value= "<?php if(!empty($_POST)){echo $custExpiry;}?>" required>
                 </div>
+
               </fieldset>
 
 
 
               <div class="grid-item">
-                Total: <span id="total-price">$0.00</span>
+                Total: <span  id="total-price-span">$0.00</span>
+                <!-- unnecessary please fix! -->
+                <input type="hidden" name = "cost" id="total-price">
                 <input type="submit" value="Order">
-
-
               </div>
+
             </div>
           </form>
 
