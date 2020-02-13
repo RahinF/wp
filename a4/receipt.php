@@ -10,7 +10,7 @@ if (empty($_SESSION)){
   $receiptData['date'] = date("h:ia d/m/Y");
   $cust = [$_SESSION['cust']['name'],$_SESSION['cust']['email'],$_SESSION['cust']['mobile']];
   $receiptData+=array_merge($cust,  $_SESSION['movie'], $_SESSION['seats']);
-  $receiptData['cost'] =  $_SESSION['cost'];
+  $receiptData['cost'] =  '$'.$_SESSION['cost'];
 
   // write to file
   $fp = fopen("booking.txt", "a");
@@ -19,23 +19,69 @@ if (empty($_SESSION)){
   flock($fp, LOCK_UN);
   fclose($fp);
 
-// display individual tickets
-function showTickets(){
-foreach($_SESSION['seats'] as $seat){
-  if ($seat > 0){
-    for($i = 0; $i < $seat; $i++){
-    echo '<div class="ticket">';
-
-    echo    '<h1>Lunardo</h1>';
-
-    echo '<p>'.$_SESSION["movie"]["id"].'</p>';
-    echo $_SESSION["movie"]["day"]. " ";
-    echo $_SESSION["movie"]["hour"]. " ";
-    echo array_search ($seat, $_SESSION['seats']).'<br>';
-    echo '</div>';
+function getMovieName($movieID){
+  switch ($movieID) {
+    case 'ACT':
+      return "Star Wars: The Rise of Skywalker";
+      break;
+    case 'ANM':
+      return "Frozen 2";
+      break;
+    case 'RMC':
+      return  "The Aeronauts";
+      break;
+    case 'AHF':
+      return  "Jojo Rabbit";
+      break;
   }
 }
-}}
+
+function getSeatName($seat){
+  switch ($seat) {
+    case 'STA':
+      return "Standard Adult";
+      break;
+    case 'STP':
+      return "Standard Concession";
+      break;
+    case 'STC':
+      return  "Standard Child";
+      break;
+    case 'FCA':
+      return  "First Class Adult";
+      break;
+    case 'FCP':
+      return  "First Class Concession";
+      break;
+    case 'FCC':
+      return  "First Class Child";
+      break;
+  }
+}
+
+//echo $movieID;
+// display individual tickets
+function showTickets(){
+  foreach($_SESSION['seats'] as $seat){
+    if ($seat > 0){
+      for($i = 0; $i < $seat; $i++){
+
+      echo  '<div class="ticket">';
+      echo  '<div class="ticket-a">';
+      echo  '<h1>Lunardo Cinema</h1>';
+      echo '<p>'.getMovieName($_SESSION["movie"]["id"])."<br>"
+      .$_SESSION["movie"]["day"]. " ".$_SESSION["movie"]["hour"]."<br>"
+      .getSeatName(array_search ($seat, $_SESSION['seats'])).'</p>';
+      echo    '</div>';
+      echo  '<div class="ticket-give">';
+      echo  '<img src="../../media/barcode.png" alt="">';
+      echo  '</div>';
+      echo  '</div>';
+
+      }
+    }
+  }
+}
 
 
 }
@@ -60,47 +106,77 @@ foreach($_SESSION['seats'] as $seat){
 <div class="receipt-box">
 <div id="receipt">
   <div class="receipt-header">
-    <img src="../../media/logo.png" alt="Lunardo Logo">
     <h1>Lunardo</h1>
-  </div>
-
-  <div class="lunardo-info">
-
-    <p>Email: lunardocinema@lundaro.com.au</p>
-    <p>Phone: (03) 9123 4567</p>
-    <p>Address: Daylesford, Victoria</p>
-    <p>ABN: 00 123 456 789</p>
-
+    <span class="lunardo-info">
+    <p>
+      ABN: 00 123 456 789<br>
+      Phone: (03) 9123 4567<br>
+      Email: lunardocinema@lundaro.com.au
+    </p>
+    </span>
   </div>
 
 <div class = "receipt-text">
-  <p>Name: <?php echo $_SESSION["cust"]["name"]; ?></p>
-  <p>Movie: <?php
+  <div class="receipt-customer-details">
+    <h2>Customer details</h2>
+    <hr>
+    <p>Name: <?php echo $_SESSION["cust"]["name"]; ?></p>
+    <p>Mobile: <?php echo $_SESSION["cust"]["mobile"]; ?></p>
+    <p>Email: <?php echo $_SESSION["cust"]["email"]; ?></p>
+  </div>
 
-  switch ($_SESSION["movie"]["id"]) {
-    case 'ACT':
-      echo "Star Wars: The Rise of Skywalker";
-      break;
-    case 'ANM':
-      echo "Frozen 2";
-      break;
-    case 'RMC':
-      echo "The Aeronauts";
-      break;
-    case 'AHF':
-      echo "Jojo Rabbit";
-      break;
+
+<div class="receipt-movie-details">
+  <h2>Movie details</h2>
+  <hr>
+  <p>Movie: <?php echo getMovieName($_SESSION["movie"]["id"]);?></p>
+  <p>Session: <?php echo $_SESSION["movie"]["day"]." ".$_SESSION["movie"]["hour"]; ?></p>
+</div>
+
+
+
+  <?php
+
+  echo  '<table>';
+  echo  '<tr>';
+  echo  '<th>Quantity</th>';
+  echo  '<th>Ticket Type</th>';
+  echo  '</tr>';
+  foreach($_SESSION['seats'] as $seat){
+
+    if ($seat > 0){
+
+      for($i = 0; $i < count($seat); $i++){
+        echo  '<tr>';
+        echo '<td>';
+        echo $seat;
+        echo'</td>';
+        echo '<td>';
+        echo getSeatName(array_search ($seat, $_SESSION['seats']));
+        echo'</td>';
+        echo  '</tr>';
+      }
+
+    }
   }
+  echo  '</table>';
+  ?>
+<div class="receipt-cost-details">
 
-  ?></p>
-  <p>Day: <?php echo $_SESSION["movie"]["day"]; ?></p>
-  <p>Time: <?php echo $_SESSION["movie"]["hour"]; ?></p>
-  <p>Cost: <?php echo $_SESSION["cost"]; ?></p>
+  <p>Cost: $<?php echo $totalCost = sprintf("%.2f",(float)$_SESSION["cost"]); ?></p>
+  <p>GST: $<?php echo $gst = sprintf("%.2f",$totalCost/11); ?></p>
+  <hr>
+  <p>Total: $<?php echo $totalCost + $gst; ?></p>
+  <hr>
 </div>
 
-<?php showTickets(); ?>
+ </div>
+</div>
+
+<div class="ticket-section"><?php showTickets(); ?></div>
+
 
 </div>
-<div>
+
   </body>
 </html>

@@ -577,6 +577,7 @@ fieldset>div>input {
   border-radius: 4px;
   border: 1px solid #565656;
 }
+
 legend {
   text-align: center;
 }
@@ -681,7 +682,7 @@ legend {
   position: relative;
   margin: auto;
   height: 29.7cm;
-  max-width: 21cm;
+  width: 21cm;
   box-sizing: border-box;
   background: #FFF;
   box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
@@ -690,6 +691,18 @@ legend {
 .receipt-header>h1 {
   display: inline;
   font-family: 'Courgette', cursive;
+  font-size: 48px;
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  color: #FFF;
+}
+
+.lunardo-info {
+  top: 2%;
+  color: #FFF;
+  position: absolute;
+  right: 5%;
 }
 
 .receipt-header>img {
@@ -698,22 +711,30 @@ legend {
 }
 
 .receipt-header {
-  text-align: center;
-  padding: 5%;
+  padding: 2%;
+  height: 8%;
+  background: #FF3B3F;
+  position: relative;
 }
 
 .receipt-text {
   padding: 5%;
 }
 
-.lunardo-info {
-  position: absolute;
-  right: 5%;
-}
-
 .receipt-box {
   background: url("../../media/dust_scratches.png");
   padding: 2%;
+}
+
+.receipt-movie-details {
+  padding-top: 3%;
+}
+
+.receipt-cost-details {
+  position: absolute;
+  right: 5%;
+  bottom: 1%;
+  text-align: right;
 }
 
 .input-error {
@@ -723,28 +744,78 @@ legend {
 }
 
 .ticket {
-  min-width: 50%;
-  max-width: 50%;
-  min-height: 15%;
-  border: 2px dotted #FFF;
-  background: #FF3B3F;
-  display: inline-block;
+  width: 396px;
+  height: 200px;
   box-sizing: border-box;
   position: relative;
   color: #FFF;
+  display: grid;
+  grid-template-columns: auto auto;
+}
 
+.ticket-a {
+  background-color: #000;
+  border-radius: 18px;
+  font-size: 16px;
+  color: white;
+  padding: 0 5%;
+  height: 200px;
+  background-image: url("../../media/tcamera.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
 }
-.ticket img {
-  display: inline;
-  opacity: 0.5;
-  height: 10%;
+
+.ticket-give {
+  background: #FF3B3F;
+  width: 75px;
+  border-radius: 18px;
 }
-.ticket h1{
+
+.ticket-give img {
+  height: 150px;
   position: absolute;
-  top: 20%;
- left: 5%;
+  right: 4%;
+  top: 13%;
+}
+
+.ticket-a h1 {
+  padding: 0;
+  font-size: 36px;
+  color: #FF3B3F;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.ticket-a p {
   margin: 0;
-  font-size: 100px;
-  opacity: .2;
-  font-family: 'Courgette', cursive;
+}
+
+.ticket-section {
+  width: 21cm;
+  margin: auto;
+  background: #FFF;
+  padding: 3% 0;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  border-collapse: collapse;
+  font-size: 18px;
+  font-family: 'Tajawal', sans-serif;
+}
+
+th {
+  background: #FF3B3F;
+  color: #FFF;
+}
+
+@page {
+  margin: 0;
+  box-shadow: 0;
 }

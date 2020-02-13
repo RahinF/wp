@@ -2,17 +2,10 @@
 include("tools.php");
 include("movie-data.php");
 
-//$_POST = [];
-
 if(!empty($_POST)){
-  $custName = filter_var($_POST["cust"]["name"], FILTER_SANITIZE_STRING);
-  $custEmail = $_POST["cust"]["email"];
-  $custMobile = $_POST["cust"]["mobile"];
-  $custCard = $_POST["cust"]["card"];
-  $custExpiry = $_POST["cust"]["expiry"];
-  $movieID = $_POST["movie"]["id"];
-  $movieDay = $_POST["movie"]["day"];
-  $movieHour = $_POST["movie"]["hour"];
+  $_POST["cust"]["name"] = filter_var($_POST["cust"]["name"], FILTER_SANITIZE_STRING);
+  $_POST["cust"]["mobile"] = str_replace(' ','',$_POST["cust"]["mobile"]);
+  $_POST["cust"]["card"] = str_replace(' ','',$_POST["cust"]["card"]);
 
   $errorCount = 0;
 
@@ -28,33 +21,33 @@ if(!empty($_POST)){
   }
 
   // name validation
-  if(!preg_match("/^[a-zA-Z \-.']+$/", $custName)){
+  if(!preg_match("/^[a-zA-Z \-.']+$/", $_POST["cust"]["name"])){
     $errCustName = '<p class= "input-error">Please input a valid name</p>';
     $errorCount++;
   } else {$errCustName = "";}
 
   // validate email
-  if (!filter_var($custEmail, FILTER_VALIDATE_EMAIL)) {
-    $errCustEmail =  '<p class= "input-error">Please input a valid email address</p>';
+  if (!filter_var($_POST["cust"]["email"], FILTER_VALIDATE_EMAIL)) {
+    $errCustEmail = '<p class= "input-error">Please input a valid email address</p>';
     $errorCount++;
   } else {$errCustEmail = "";}
 
   // validate mobile
-  if(!preg_match("/^(\(04\)|04|\+614)( ?\d){8}$/", $custMobile)){
+  if(!preg_match("/^(\(04\)|04|\+614)( ?\d){8}$/", $_POST["cust"]["mobile"])){
     $errCustMobile =  '<p class= "input-error">Must contain 10 digit and start with 04 or +614</p>';
     $errorCount++;
   } else {$errCustMobile = "";}
 
   // validate card
-  if(!preg_match("/^( ?\d){14,19}$/", $custCard)){
-    $errCustCard =  '<p class= "input-error">Must contain 14-19 digits</p>';
+  if(!preg_match("/^( ?\d){14,19}$/", $_POST["cust"]["card"])){
+    $errCustCard = '<p class= "input-error">Must contain 14-19 digits</p>';
     $errorCount++;
  } else {$errCustCard = "";}
 
 
  // validate expiry
- if(!preg_match("/^[0-9]{4}\-[0-9]{2}$/", $custExpiry)){
-   $errCustExpiry =   '<p class= "input-error">Please select a valid date</p>';
+ if(!preg_match("/^[0-9]{4}\-[0-9]{2}$/", $_POST["cust"]["expiry"])){
+   $errCustExpiry = '<p class= "input-error">Please select a valid date</p>';
    $errorCount++;
   } else {$errCustExpiry = "";}
 
@@ -64,21 +57,19 @@ if(!empty($_POST)){
   } else {$errSeats = "";}
 
 // if movie is selected or not
-  if (empty($movieID)){
+  if (empty($_POST["movie"]["id"])){
     $errMovieID = '<p class="input-error">Please select a movie</p>';
     $errorCount++;
   } else {$errMovieID = "";}
 
 // if session is selected or not
-  if (isset($movieID) && empty($movieDay) || empty($movieHour)){
+  if (isset($_POST["movie"]["id"]) && empty($_POST["movie"]["day"]) || empty($_POST["movie"]["hour"])){
     $errMovieTime = '<p class="input-error">Please select a session time</p>';
     $errorCount++;
   } else {$errMovieTime = "";}
 
-//$_POST += ['cost' => $totalCost];
 // redirect if ok
   if ($errorCount == 0){
-    //$_POST['cost'] += ['c3t'];
   $_SESSION = $_POST;
     header("location: receipt.php");
   }
@@ -379,8 +370,8 @@ if(!empty($_POST)){
           </div>
 
           <?php
-          if (isset($movieID)){echo $errMovieID;}
-          if (isset($movieDay) && isset($movieHour)){echo $errMovieTime;}
+          if (isset($_POST["movie"]["id"])){echo $errMovieID;}
+          if (isset($_POST["movie"]["day"]) && isset($_POST["movie"]["hour"])){echo $errMovieTime;}
           if (!empty($_POST)){echo $errSeats;}
           ?>
 
@@ -390,14 +381,14 @@ if(!empty($_POST)){
               <fieldset class="grid-item">
                 <legend>Standard</legend>
                 <div>Adults<select id="seats[STA]" name="seats[STA]"></select></div>
-                <div>Consession<select id="seats[STP]" name="seats[STP]"></select></div>
+                <div>Concession<select id="seats[STP]" name="seats[STP]"></select></div>
                 <div>Children<select id="seats[STC]" name="seats[STC]"></select></div>
               </fieldset>
 
               <fieldset class="grid-item">
                 <legend>First Class</legend>
                 <div>Adults<select id="seats[FCA]" name="seats[FCA]"></select></div>
-                <div>Consession<select id="seats[FCP]" name="seats[FCP]"></select></div>
+                <div>Concession<select id="seats[FCP]" name="seats[FCP]"></select></div>
                 <div>Children<select id="seats[FCC]" name="seats[FCC]"></select></div>
               </fieldset>
             </div>
@@ -405,37 +396,37 @@ if(!empty($_POST)){
             <div>
               <fieldset class="grid-item">
                 <legend>Customer</legend>
-                <input id="movie[id]" type="hidden" name="movie[id]" value= "<?php if(!empty($_POST)){echo $movieID; }?>">
-                <input id="movie[day]" type="hidden" name="movie[day]" value= "<?php if(!empty($_POST)){echo $movieDay; }?>">
-                <input id="movie[hour]" type="hidden" name="movie[hour]" value= "<?php if(!empty($_POST)){echo $movieHour; }?>">
+                <input id="movie[id]" type="hidden" name="movie[id]" value= "<?php if(!empty($_POST)){echo $_POST["movie"]["id"]; }?>">
+                <input id="movie[day]" type="hidden" name="movie[day]" value= "<?php if(!empty($_POST)){echo $_POST["movie"]["day"]; }?>">
+                <input id="movie[hour]" type="hidden" name="movie[hour]" value= "<?php if(!empty($_POST)){echo $_POST["movie"]["hour"]; }?>">
 
                 <div>
-                  <?php if(isset($custName)){echo $errCustName;} ?>
+                  <?php if(isset($_POST["cust"]["name"])){echo $errCustName;} ?>
                   <label for="cust[name]">Name</label>
-                  <input id="cust[name]" type="text" name="cust[name]" placeholder="John Smith" value= "<?php if(!empty($_POST)){echo $custName;}?>" required>
+                  <input id="cust[name]" type="text" name="cust[name]" placeholder="John Smith" value= "<?php if(!empty($_POST)){echo $_POST["cust"]["name"];}?>" required>
                 </div>
 
                 <div>
-                  <?php if(isset($custEmail)){echo $errCustEmail;} ?>
+                  <?php if(isset($_POST["cust"]["email"])){echo $errCustEmail;} ?>
                   <label for="cust[email]">Email</label>
-                  <input id="cust[email]" type="email" name="cust[email]" placeholder="example@mail.com" value= "<?php if(!empty($_POST)){echo $custEmail;}?>" required>
+                  <input id="cust[email]" type="email" name="cust[email]" placeholder="example@mail.com" value= "<?php if(!empty($_POST)){echo $_POST["cust"]["email"];}?>" required>
                 </div>
 
                 <div>
-                  <?php if(isset($custMobile)){echo $errCustMobile;} ?>
+                  <?php if(isset($_POST["cust"]["mobile"])){echo $errCustMobile;} ?>
                   <label for="cust[mobile]">Mobile</label>
-                  <input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" value= "<?php if(!empty($_POST)){echo $custMobile;}?>" required>
+                  <input id="cust[mobile]" type="tel" name="cust[mobile]" placeholder="04 12345678" value= "<?php if(!empty($_POST)){echo $_POST["cust"]["mobile"];}?>" required>
                 </div>
 
                 <div>
-                  <?php if(isset($custCard)){echo $errCustCard;} ?>
+                  <?php if(isset($_POST["cust"]["card"])){echo $errCustCard;} ?>
                   <label for="cust[card]">Credit Card</label>
-                  <input id="cust[card]" type="text" name="cust[card]" placeholder="0123 4567 8901 2345" value= "<?php if(!empty($_POST)){echo $custCard;}?>" required>
+                  <input id="cust[card]" type="text" name="cust[card]" placeholder="0123 4567 8901 2345" value= "<?php if(!empty($_POST)){echo $_POST["cust"]["card"];}?>" required>
                 </div>
 
                 <div>
-                  <?php if(isset($custExpiry)){echo $errCustExpiry;} ?>
-                  Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" value= "<?php if(!empty($_POST)){echo $custExpiry;}?>" required>
+                  <?php if(isset($_POST["cust"]["expiry"])){echo $errCustExpiry;} ?>
+                  Expiry<input type="month" name="cust[expiry]" placeholder="YYYY-MM" value= "<?php if(!empty($_POST)){echo $_POST["cust"]["expiry"];}?>" required>
                 </div>
 
               </fieldset>
@@ -443,7 +434,7 @@ if(!empty($_POST)){
 
 
               <div class="grid-item">
-                Total: <span  id="total-price-span">$0.00</span>
+                Total: $<span  id="total-price-span">0.00</span>
                 <!-- unnecessary please fix! -->
                 <input type="hidden" name = "cost" id="total-price">
                 <input type="submit" value="Order">
