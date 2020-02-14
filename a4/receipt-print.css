@@ -1,0 +1,19 @@
+@media print {
+  .receipt-box {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ticket-section {
+    height: 29.7cm;
+  }
+
+  .thank-you-message {
+    visibility: hidden;
+  }
+}
+
+@page {
+  margin: 0;
+}

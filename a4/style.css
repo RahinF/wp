@@ -685,7 +685,7 @@ legend {
   width: 21cm;
   box-sizing: border-box;
   background: #FFF;
-  box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1);
+  /* box-shadow: 1px 1px 8px 4px hsla(0, 0%, 0%, 0.1); */
 }
 
 .receipt-header>h1 {
@@ -730,6 +730,11 @@ legend {
   padding-top: 3%;
 }
 
+.thank-you-message {
+  position: absolute;
+  bottom: 5%;
+}
+
 .receipt-cost-details {
   position: absolute;
   right: 5%;
@@ -751,6 +756,7 @@ legend {
   color: #FFF;
   display: grid;
   grid-template-columns: auto auto;
+  user-select: none;
 }
 
 .ticket-a {
@@ -795,7 +801,6 @@ legend {
   width: 21cm;
   margin: auto;
   background: #FFF;
-  padding: 3% 0;
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -813,9 +818,4 @@ table, th, td {
 th {
   background: #FF3B3F;
   color: #FFF;
-}
-
-@page {
-  margin: 0;
-  box-shadow: 0;
 }
