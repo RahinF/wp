@@ -12,6 +12,10 @@
   .thank-you-message {
     visibility: hidden;
   }
+
+  .debug-module{
+    display: none;
+  }
 }
 
 @page {

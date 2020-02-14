@@ -1,5 +1,9 @@
 <?php
-session_start();
+include_once("tools.php");
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (empty($_SESSION)){
   header("Location: index.php");
@@ -179,6 +183,12 @@ function showTickets(){
 </div>
 
 <?php showTickets(); ?>
+</div>
+
+<div class="debug-module">
+  <?php
+  preshow($_SESSION);
+  printMyCode(); ?>
 </div>
   </body>
 </html>
