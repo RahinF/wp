@@ -199,23 +199,14 @@ if(!empty($_POST)){
     <section id="now-showing">
 
       <h1 class="section-heading">Now showing</h1>
-      <div class="now-showing-grid"><?php showMoviePanel(); ?></div>
-      <div class="synopsis"><?php showSynopsisPanel(); ?></div>
+      <div class="now-showing-grid"><?php moviePanel(); ?></div>
+      <div class="synopsis"><?php synopsisPanel(); ?></div>
 
 
       <div id="booking-section">
         <div class="booking-form">
-          <div class="booking-movie-details">
-
-            <h2 id="bookingACT" class="movie-name">Star Wars: The Rise of Skywalker</h2>
-            <h2 id="bookingANM" class="movie-name">Frozen 2</h2>
-            <h2 id="bookingRMC" class="movie-name">The Aeronauts</h2>
-            <h2 id="bookingAHF" class="movie-name">JoJo Rabbit</h2>
-            <h3 id="booking-day"></h3>
-            <h3 id="booking-hour"></h3>
-          </div>
-
           <?php
+          bookingName();
           if (isset($_POST["movie"]["id"])){echo $errMovieID;}
           if (isset($_POST["movie"]["day"]) && isset($_POST["movie"]["hour"])){echo $errMovieTime;}
           if (!empty($_POST)){echo $errSeats;}
@@ -314,7 +305,6 @@ if(!empty($_POST)){
   </footer>
 
   <?php
-//  showMoviePanel();
   preshow($_POST);
   echo "session";
   preshow($_SESSION);

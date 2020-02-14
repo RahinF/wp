@@ -1,1 +1,2 @@
 Date	Name	Email	Mobile	MovieID	Day	Hour	"STA Qty"	"STP Qty"	"STC Qty"	"FCA Qty"	"FCP Qty"	"FCC Qty"	Total
+"03:24pm 14/02/2020"	"John Smith"	example@mail.com	0412345687	AHF	Friday	12pm	1	0	0	0	0	0	$15.00

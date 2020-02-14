@@ -1,6 +1,5 @@
 <?php
 
-
 // gets movie info from file
    $fp = fopen('movie-times.tsv','r');
    if (($headings = fgetcsv($fp, 0, "\t")) !== false) {
@@ -74,8 +73,8 @@ $ticketPrices = [
   echo '</div>';
 }
 
-function showMoviePanel() {
 // create movie panel
+function moviePanel() {
   for($i = 0; $i < count($GLOBALS['movie-data']); $i++){
     echo '<div id="moviePanel'.$GLOBALS['movie-data']["LC00".$i]['Genre'].'" class="movie-box">';
     echo '<img src="../../media/movie-'.$GLOBALS['movie-data']["LC00".$i]["Genre"].'.jpg" alt="'.$GLOBALS['movie-data']["LC00".$i]["Name"].'">';
@@ -97,7 +96,8 @@ function showMoviePanel() {
   }
 }
 
-function showSynopsisPanel(){
+// create synopsis panel
+function synopsisPanel(){
   for($i = 0; $i < count($GLOBALS['movie-data']); $i++){
     echo '<div id="synopsis'.$GLOBALS['movie-data']["LC00".$i]['Genre'].'" class="synopsis-tabs synopsis-container">';
     echo '<div>';
@@ -118,6 +118,17 @@ function showSynopsisPanel(){
     echo    '</div>';
     echo  '</div>';
   }
+}
+
+// create booking name
+function bookingName() {
+  echo '<div class="booking-movie-details">';
+  for($i = 0; $i < count($GLOBALS['movie-data']); $i++){
+      echo '<h2 id="booking'.$GLOBALS['movie-data']["LC00".$i]['Genre'].'" class="movie-name">'.$GLOBALS['movie-data']["LC00".$i]["Name"].'</h2>';
+  }
+  echo '<h3 id="booking-day"></h3>';
+  echo '<h3 id="booking-hour"></h3>';
+  echo  '</div>';
 }
 
 ?>

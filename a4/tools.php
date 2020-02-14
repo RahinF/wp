@@ -1,7 +1,6 @@
 <?php
-  session_start();
+session_start();
 
-// Put your PHP functions and modules here
 function preShow( $arr, $returnAsString=false ) {
   $ret  = '<pre>' . print_r($arr, true) . '</pre>';
   if ($returnAsString)

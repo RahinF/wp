@@ -1,4 +1,3 @@
-/* Insert your javascript here */
 const movieId = ["ACT", "AHF", "ANM", "RMC"];
 const movieDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 const movieHours = ["3pm", "6pm", "9pm", "12pm"];
@@ -28,7 +27,6 @@ const ticketPrices = {
     'Normal Price': 25,
   }
 };
-//----------------------------------------------------------------------------
 
 // when page loads adds event listeners to buttons
 window.onload = function startUpEvents() {
@@ -56,8 +54,6 @@ window.onload = function startUpEvents() {
 
 }
 
-
-//----------------------------------------------------------------------------
 // opens the synopsis area of movie panel clicked and changes name of booking area
 function openSynopsis(moviePanel) {
   var moviePanelID = moviePanel.target.offsetParent.id.substr(-3, 3);
@@ -90,7 +86,6 @@ function openSynopsis(moviePanel) {
   }
 }
 
-//----------------------------------------------------------------------------
 // toggle movie times
 function showSessionTimes(moviePanel) {
 
@@ -102,9 +97,6 @@ function showSessionTimes(moviePanel) {
     movieSessionTimes.style.display = "none";
   }
 }
-
-//----------------------------------------------------------------------------
-
 
 // auto-generated select options and adds on change event to calc prices.
 function addOption() {
@@ -143,18 +135,11 @@ function addDayHour(e) {
     }
   }
 
-  // displays booking area
-  // var bookingSection = document.getElementById('booking-section');
-  // if (bookingSection.style.display = "none") {
-  //   bookingSection.style.display = "grid";
-  // }
   // scrolls to booking area
   document.getElementById("booking-section").scrollIntoView();
 }
 
 //----------------------------------------------------------------------------
-
-
 // changes hidden id field based on id of movie
 function addMovieGenre(e) {
   var moviePanelID = e.currentTarget.id;
@@ -164,8 +149,6 @@ function addMovieGenre(e) {
     }
   }
 }
-//----------------------------------------------------------------------------
-
 
 // changes the appearance of nav links based on the current section
 window.onscroll = function() {
@@ -224,5 +207,5 @@ function calcTotalPrice() {
 
   // write result to span
   document.getElementById('total-price-span').innerHTML = totalPrice.toFixed(2);
-  document.getElementById('total-price').value =  totalPrice.toFixed(2);
+  document.getElementById('total-price').value = totalPrice.toFixed(2);
 }

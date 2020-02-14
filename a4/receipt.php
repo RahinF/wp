@@ -9,7 +9,6 @@ if (empty($_SESSION)){
   header("Location: index.php");
 } else {
 
-
   // merge $_POST into single array
   $receiptData['date'] = date("h:ia d/m/Y");
   $cust = [$_SESSION['cust']['name'],$_SESSION['cust']['email'],$_SESSION['cust']['mobile']];
@@ -63,15 +62,11 @@ function getSeatName($seat){
   }
 }
 
-
 // display individual tickets
-
 function showTickets(){
   $ticketCount =0;
   foreach($_SESSION['seats'] as $seat){
-
     if ($seat > 0){
-
       for($i = 0; $i < $seat; $i++){
         if ($ticketCount == 0){
       echo '<div class="ticket-section">';
@@ -91,13 +86,11 @@ function showTickets(){
       if ($ticketCount == 10){
         echo  '</div>';
         $ticketCount = 0;
-
       }
       }
     }
   }
 }
-
 
 }
 ?>
@@ -114,81 +107,80 @@ function showTickets(){
   <link rel="stylesheet" href="receipt-print.css">
   <script src='../wireframe.js'></script>
 
-
   <!-- Google font -->
   <link href="https://fonts.googleapis.com/css?family=Courgette|Montserrat|Tajawal&display=swap" rel="stylesheet">
 </head>
 
-  <body>
-<div class="receipt-box">
-  <div id="receipt">
+<body>
+  <div class="receipt-box">
+    <div id="receipt">
     <div class="receipt-header">
-    <h1>Lunardo</h1>
-    <span class="lunardo-info">
-    <p>
-      ABN: 00 123 456 789<br>
-      Phone: (03) 9123 4567<br>
-      Email: lunardocinema@lundaro.com.au
-    </p>
-    </span>
-  </div>
+      <h1>Lunardo</h1>
+      <span class="lunardo-info">
+        <p>
+          ABN: 00 123 456 789<br>
+          Phone: (03) 9123 4567<br>
+          Email: lunardocinema@lundaro.com.au
+        </p>
+      </span>
+    </div>
     <div class = "receipt-text">
-  <div class="receipt-customer-details">
-    <h2>Customer details</h2>
-    <hr>
-    <p>Name: <?php echo $_SESSION["cust"]["name"]; ?></p>
-    <p>Mobile: <?php echo $_SESSION["cust"]["mobile"]; ?></p>
-    <p>Email: <?php echo $_SESSION["cust"]["email"]; ?></p>
-  </div>
-    <div class="receipt-movie-details">
-  <h2>Movie details</h2>
-  <hr>
-  <p>Movie: <?php echo getMovieName($_SESSION["movie"]["id"]);?></p>
-  <p>Session: <?php echo $_SESSION["movie"]["day"]." ".$_SESSION["movie"]["hour"]; ?></p>
-</div>
+      <div class="receipt-customer-details">
+        <h2>Customer details</h2>
+        <hr>
+        <p>Name: <?php echo $_SESSION["cust"]["name"]; ?></p>
+        <p>Mobile: <?php echo $_SESSION["cust"]["mobile"]; ?></p>
+        <p>Email: <?php echo $_SESSION["cust"]["email"]; ?></p>
+      </div>
+      <div class="receipt-movie-details">
+        <h2>Movie details</h2>
+        <hr>
+        <p>Movie: <?php echo getMovieName($_SESSION["movie"]["id"]);?></p>
+        <p>Session: <?php echo $_SESSION["movie"]["day"]." ".$_SESSION["movie"]["hour"]; ?></p>
+      </div>
 
-  <?php
-  echo  '<table>';
-  echo  '<tr>';
-  echo  '<th>Quantity</th>';
-  echo  '<th>Ticket Type</th>';
-  echo  '</tr>';
-  foreach($_SESSION['seats'] as $seat){
-    if ($seat > 0){
-      for($i = 0; $i < count($seat); $i++){
-        echo  '<tr>';
-        echo '<td>';
-        echo $seat;
-        echo'</td>';
-        echo '<td>';
-        echo getSeatName(array_search ($seat, $_SESSION['seats']));
-        echo'</td>';
-        echo  '</tr>';
+      <?php
+      echo  '<table>';
+      echo  '<tr>';
+      echo  '<th>Quantity</th>';
+      echo  '<th>Ticket Type</th>';
+      echo  '</tr>';
+      foreach($_SESSION['seats'] as $seat){
+        if ($seat > 0){
+          for($i = 0; $i < count($seat); $i++){
+            echo  '<tr>';
+            echo '<td>';
+            echo $seat;
+            echo'</td>';
+            echo '<td>';
+            echo getSeatName(array_search ($seat, $_SESSION['seats']));
+            echo'</td>';
+            echo  '</tr>';
+          }
+        }
       }
-    }
-  }
-  echo  '</table>';
-  ?>
-<div class="thank-you-message">
-  <p>Thank you for your purchase! Your tickets are available below.</p>
-</div>
-  <div class="receipt-cost-details">
-    <p>Cost: $<?php echo $totalCost = sprintf("%.2f",(float)$_SESSION["cost"]); ?></p>
-    <p>GST: $<?php echo $gst = sprintf("%.2f",$totalCost/11); ?></p>
-    <hr>
-    <p>Total: $<?php echo $totalCost + $gst; ?></p>
-    <hr>
+      echo  '</table>';
+      ?>
+      <div class="thank-you-message">
+        <p>Thank you for your purchase! Your tickets are available below.</p>
+      </div>
+      <div class="receipt-cost-details">
+        <p>Cost: $<?php echo $totalCost = sprintf("%.2f",(float)$_SESSION["cost"]); ?></p>
+        <p>GST: $<?php echo $gst = sprintf("%.2f",$totalCost/11); ?></p>
+        <hr>
+        <p>Total: $<?php echo $totalCost + $gst; ?></p>
+        <hr>
+      </div>
+    </div>
   </div>
- </div>
-</div>
 
-<?php showTickets(); ?>
-</div>
+  <?php showTickets(); ?>
+  </div>
 
-<div class="debug-module">
-  <?php
-  preshow($_SESSION);
-  printMyCode(); ?>
-</div>
-  </body>
+  <div class="debug-module">
+    <?php
+    preshow($_SESSION);
+    printMyCode(); ?>
+  </div>
+</body>
 </html>
